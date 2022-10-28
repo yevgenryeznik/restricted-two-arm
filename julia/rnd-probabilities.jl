@@ -43,11 +43,9 @@ function calculate_prb(rnd::PBD, N1::Int64, N2::Int64)
     # 1 <= k <= bs
     k = (j % bs == 0)*bs + (j % bs)
 
-    # when a new block starts, the number of treatments in the
-    # 1st treatment arm (n1) is set to 0
-    if (k == 1)
-        n1 = 0 
-    end
+    # calculating the number of subjects in a block 
+    # allocated to the 1st treatment arm (n1)
+    n1 = k == 1 ? 0 : N1 - ((j - 1) ÷ bs)*(bs/2) 
 
     # calculating probability of treatment assignment
     prb = (0.5*bs-n1)/(bs-k+1)
