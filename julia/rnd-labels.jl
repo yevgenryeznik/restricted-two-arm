@@ -83,7 +83,7 @@ function set_label(rnd::BCDWIT)
     param1 = rnd.param1
     param2 = rnd.param2
 
-    if typeof(param1) == Rational{Int64} # param2 is a Rational number
+    if typeof(param1) == Rational{Int64} # param1 is a Rational number
         n = numerator(param1)            # get numerator
         d = denominator(param1)          # get denominator
         label = "BCDWIT($n/$d, $param2)"
