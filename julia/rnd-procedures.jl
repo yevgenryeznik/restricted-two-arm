@@ -15,13 +15,15 @@ end
 
 # Truncated Binomial Design
 # subjects are allocated acoring to CRD (tossing a coin ) until one of 
-# treatments gets enough number of subjects (half of the totla sample size). 
+# treatments gets enough number of subjects (half of the total sample size). 
 # Then, the rest of the subjects is is deterministically allocated to another 
 # tretament. 
-# param reperesents probability of a coin (p).
+# param1 represents probability of a coin (p).
+# param2 represents total sample size (nsbj) 
 # E.g., for a fair coin, p = 0.5 
 struct TBD <: RestrictedRandomization 
-    param::Number
+    param1::Number
+    param2::Int64
 end
 
 
