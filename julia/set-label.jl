@@ -1,6 +1,24 @@
-# Here, we define a set of utility functions to create descriptive labels
-# for randomization procedures used.
+# A utility function to create a descriptive label for a given randomization procedures.
 
+function set_label(rnd::RestrictedRandomization)
+    label = typeof(rnd).name.wrapper
+
+    if hasfield(typeof(rnd), :param)
+        param = rnd.param
+        if typeof(param) == Rational{Int64}  # param is a Rational number
+            n = numerator(param)             # get numerator
+            d = denominator(param)           # get denominator
+            label = "$label($n/$d)"
+        elseif typeof(param) == Int64        # param is Integer number
+            label = "$label($param)"
+        else
+            param = round(param, digits = 2) # otherwise, round it to 2 disgits
+            label = "$label($param)"
+        end
+    end
+    
+    return label
+end
 
 # Completely Randomized Design
 function set_label(rnd::CRD)
