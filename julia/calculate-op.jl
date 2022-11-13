@@ -127,3 +127,16 @@ function calc_pcg(rct::SimulatedRCT)
     # returning probabilities of correct guesses at each allocation step
     return vec(mean(guess .== trt, dims = 2))
 end
+
+
+# function to calculate operational characteristics, given simulation output
+function calculate_op(rct::SimulatedRCT)
+    sbj = collect(1:rct.nsbj) # subjects' IDs (allocation step)
+    Imb = calc_expected_imb(rct)      # expected (average) imbalance
+    Loss = calc_expected_loss(rct)    # expected (average) loss
+    FI = calc_fi(rct)                 # expected (average) forcing index
+    PCG = calc_pcg(rct)               # expected (average) probabilities of correct guesses
+
+    # an output as a DataFrame
+    rct_summary = DataFrame(sbj = sbj, Imb = Imb, Loss = Loss, FI = FI, PCG = PCG)
+end
