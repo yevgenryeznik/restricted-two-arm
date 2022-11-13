@@ -10,7 +10,7 @@
 function calculate_prb(rnd::CRD, N1::Int64, N2::Int64)
     # getting probability of a coin: 
     # it is a probability of treatment assignment
-    p = rnd.param
+    p = 0.5
 
     return p
 end
@@ -18,14 +18,11 @@ end
 
 # Truncated Binomial Design
 function calculate_prb(rnd::TBD, N1::Int64, N2::Int64)
-    # getting probability of a coin
-    p = rnd.param1
-
     # getting total sample size
-    nsbj = rnd.param2
+    nsbj = rnd.nsbj
 
     # calculating probability of treatment assignment
-    prb = max(N1, N2) < nsbj/2 ? p : (N1 < N2 ? 1 : 0)
+    prb = max(N1, N2) < nsbj/2 ? 0.5 : (N1 < N2 ? 1 : 0)
 
     return prb
 end
@@ -57,7 +54,7 @@ end
 # Random Allocation Rule (Rand)
 function calculate_prb(rnd::RAND, N1::Int64, N2::Int64)
     # getting a block size (for Rand, it is equal to the total sample size)
-    nsbj = rnd.param
+    nsbj = rnd.nsbj
 
     # indicating a current allocation step (current subject's ID) --
     # it is equal to a current subject's position in a block.
