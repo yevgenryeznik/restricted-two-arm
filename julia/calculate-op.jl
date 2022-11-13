@@ -139,7 +139,7 @@ function calculate_op(rct::SimulatedRCT)
     Imb = calc_expected_abs_imb(rct)  # expected (average) absolute imbalance
     Loss = calc_expected_loss(rct)    # expected (average) loss
     FI = calc_fi(rct)                 # expected (average) forcing index
-    PCG = calc_pcg(rct)               # expected (average) probabilities of correct guesses
+    PCG = calc_pcg(rct)               # expected (average) proportions of correct guesses
 
     # an output as a DataFrame
     rct_summary = DataFrame(design = design, sbj = sbj, Imb = Imb, Loss = Loss, FI = FI, PCG = PCG)
