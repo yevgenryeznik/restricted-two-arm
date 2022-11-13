@@ -100,8 +100,8 @@ function calc_fi(rct::SimulatedRCT)
 end
 
 
-# function to calculate probabilities of correct guesses at each 
-# allocation step
+# function to calculate proportions of correct guesses up to 
+# given allocation step
 function calc_pcg(rct::SimulatedRCT)
     # getting simulated treatment sequences
     trt = rct.trt
@@ -124,8 +124,11 @@ function calc_pcg(rct::SimulatedRCT)
         end
     end
 
-    # returning probabilities of correct guesses at each allocation step
-    return vec(mean(guess .== trt, dims = 2))
+    # probabilities of correct guesses at each allocation step
+    prb_guess == vec(mean(guess .== trt, dims = 2))
+
+    # returning proportion of correct guesses up to given allocation step
+    return cumsum(prb_guess) ./ (1:nsbj)
 end
 
 
