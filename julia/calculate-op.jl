@@ -131,12 +131,15 @@ end
 
 # function to calculate operational characteristics, given simulation output
 function calculate_op(rct::SimulatedRCT)
-    sbj = collect(1:rct.nsbj) # subjects' IDs (allocation step)
-    Imb = calc_expected_imb(rct)      # expected (average) imbalance
+    design = rct.label                # randomization procedure used
+    sbj = collect(1:rct.nsbj)         # subjects' IDs (allocation step)
+    Imb = calc_expected_abs_imb(rct)  # expected (average) absolute imbalance
     Loss = calc_expected_loss(rct)    # expected (average) loss
     FI = calc_fi(rct)                 # expected (average) forcing index
     PCG = calc_pcg(rct)               # expected (average) probabilities of correct guesses
 
     # an output as a DataFrame
-    rct_summary = DataFrame(sbj = sbj, Imb = Imb, Loss = Loss, FI = FI, PCG = PCG)
+    rct_summary = DataFrame(design = design, sbj = sbj, Imb = Imb, Loss = Loss, FI = FI, PCG = PCG)
+
+    return rct_summary
 end
