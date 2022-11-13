@@ -125,7 +125,7 @@ function calc_pcg(rct::SimulatedRCT)
     end
 
     # probabilities of correct guesses at each allocation step
-    prb_guess == vec(mean(guess .== trt, dims = 2))
+    prb_guess = vec(mean(guess .== trt, dims = 2))
 
     # returning proportion of correct guesses up to given allocation step
     return cumsum(prb_guess) ./ (1:nsbj)
