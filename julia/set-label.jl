@@ -1,5 +1,4 @@
 # A utility function to create a descriptive label for a given randomization procedures.
-
 function set_label(rnd::RestrictedRandomization)
     label = typeof(rnd).name.wrapper
 
