@@ -16,7 +16,7 @@ function set_label(rnd::RestrictedRandomization)
         end
     else
         if hasfield(typeof(rnd), :param1) & hasfield(typeof(rnd), :param2) 
-            param = [rnd.param1, rnd.param2]
+            param = (rnd.param1, rnd.param2)
             param_ = ["", ""]
             for i in eachindex(param)
                 if typeof(param[i]) == Rational{Int64}  # param is a Rational number
@@ -31,6 +31,8 @@ function set_label(rnd::RestrictedRandomization)
                 end
             end
             label = "$label($(param_[1]), $(param_[2]))"
+        else
+            label = "$label"
         end
     end
     
