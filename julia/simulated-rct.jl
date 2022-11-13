@@ -1,18 +1,20 @@
-struct SimulatedRCT
-    rnd::String         # name of RR procedure
+# A user-defined type to represent a simulated Randomized Clinical Trial (RCT)
+struct SimulatedRCT{T}
+    label::String       # name of RR procedure
     nsbj::Int64         # sample size  
     nsim::Int64         # number of trial simulations 
     trt::Array{Int64} # treatment sequences
     prb::Array{Float64} # probabilities of treatment assignments
-    rsp::Array{Float64} # subjects' responses 
+    rsp::Array{T}       # subjects' responses 
 end
 
 
+# Ovveriding a `Base` function `show` to print out an instance of `SimulatedRCT``
 function Base.show(io::IO, rct::SimulatedRCT)
-    nsbj, nsim, rnd = rct.nsbj, rct.nsim, rct.rnd
+    nsbj, nsim, label = rct.nsbj, rct.nsim, rct.label
 
     println("Simulated RCT, targeting 1:1 allocation:")
-    println("   - $(rnd) randomization;")
+    println("   - $(label) randomization;")
     println("   - $(nsbj) subjects;")
     println("   - $(nsim) simulations.")
     println("\nTreatment assignments:")
