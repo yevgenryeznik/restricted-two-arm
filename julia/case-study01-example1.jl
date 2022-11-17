@@ -1,4 +1,4 @@
-# A simulation study done for the publication:
+# Example 1 of the simulation study done for the publication:
 # -   title: A roadmap to using randomization in clinical trials
 # - authors: Vance W. Berger, Louis Joseph Bour, Kerstine Carter, Jonathan J. Chipman, Colin C. Everett, Nicole Heussen, 
 #            Catherine Hewitt, Ralf-Dieter Hilgers, Yuqun Abigail Luo, Jone Renteria, Yevgen Ryeznik, Oleksandr Sverdlov & 
