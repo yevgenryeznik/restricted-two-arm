@@ -31,3 +31,13 @@ function Base.show(io::IO, rct::SimulatedRCT)
         display(rct.rsp)
     end
 end
+
+function set_response(rct::SimulatedRCT, rsp::Array{T}) where {T <: Number}
+    label = rct.label  # name of RR procedure
+     nsbj = rct.nsbj   # sample size  
+     nsim = rct.nsim   # number of trial simulations 
+      trt = rct.trt    # treatment sequences
+      prb = rct.prb    # probabilities of treatment assignments
+
+     return SimulatedRCT(label, nsbj, nsim, trt, prb, rsp) 
+end
