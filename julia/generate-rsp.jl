@@ -5,7 +5,7 @@ function generate_rsp(R1::Distribution, R0::Distribution, trt::Array{Int64}, see
 
     seed!(seed)
     rsp1 = rand(R1, nsbj, nsim)
-    rsp0 = rand(R2, nsbj, nsim)
+    rsp0 = rand(R0, nsbj, nsim)
 
     for s ∈ 1:nsim
         for j ∈ 1:nsbj
@@ -36,8 +36,8 @@ end
 function add_sb(trt::Array{Int64}, rsp::Array{T}, sb::Number) where {T <: Number}
     nsim = size(trt, 2)
     imb = hcat(map(1:nsim) do col
-        T = trt[:, col]
-        imb_ = cumsum(2 .*T .- 1)
+        δ = trt[:, col]
+        imb_ = cumsum(2 .*δ .- 1)
         
         return [0; imb_[1:end-1]]
     end...)
