@@ -95,11 +95,11 @@ fig01 = Gadfly.plot(
 
 # saving absolute imbalance plot:
 # pdf format
-fig01_pdf = "output/case-staudy01-example1-fig01.pdf"
+fig01_pdf = "output/case-study01-example1-fig01.pdf"
 draw(PDF(fig01_pdf, 12inch, 8inch, dpi=300), fig01)
 
 # png format
-fig01_png = "output/case-staudy01-example1-fig01.png"
+fig01_png = "output/case-study01-example1-fig01.png"
 draw(PNG(fig01_png, 12inch, 8inch, dpi=300), fig01)
 
 
@@ -136,11 +136,11 @@ fig02 = Gadfly.plot(
 
 # saving PCG plot:
 # pdf format
-fig02_pdf = "output/case-staudy01-example1-fig02.pdf"
+fig02_pdf = "output/case-study01-example1-fig02.pdf"
 draw(PDF(fig02_pdf, 12inch, 8inch, dpi=300), fig02)
 
 # png format
-fig02_png = "output/case-staudy01-example1-fig02.png"
+fig02_png = "output/case-study01-example1-fig02.png"
 draw(PNG(fig02_png, 12inch, 8inch, dpi=300), fig02)
 
 
@@ -188,11 +188,11 @@ fig03 = Gadfly.plot(
 
 # saving PCG plot:
 # pdf format
-fig03_pdf = "output/case-staudy01-example1-fig03.pdf"
+fig03_pdf = "output/case-study01-example1-fig03.pdf"
 draw(PDF(fig03_pdf, 12inch, 8inch, dpi=300), fig03)
 
 # png format
-fig03_png = "output/case-staudy01-example1-fig03.png"
+fig03_png = "output/case-study01-example1-fig03.png"
 draw(PNG(fig03_png, 12inch, 8inch, dpi=300), fig03)
 
 
@@ -231,11 +231,11 @@ fig04 = Gadfly.plot(
 
 # saving PCG plot:
 # pdf format
-fig04_pdf = "output/case-staudy01-example1-fig04.pdf"
+fig04_pdf = "output/case-study01-example1-fig04.pdf"
 draw(PDF(fig04_pdf, 12inch, 8inch, dpi=300), fig04)
 
 # png format
-fig04_png = "output/case-staudy01-example1-fig04.png"
+fig04_png = "output/case-study01-example1-fig04.png"
 draw(PNG(fig04_png, 12inch, 8inch, dpi=300), fig04)
 
 
@@ -332,10 +332,10 @@ fig05 = Gadfly.plot(
 
 # saving PCG plot:
 # pdf format
-fig05_pdf = "output/case-staudy01-example1-fig05.pdf"
+fig05_pdf = "output/case-study01-example1-fig05.pdf"
 draw(PDF(fig05_pdf, 12inch, 8inch, dpi=300), fig05)
 
 # png format
-fig05_png = "output/case-staudy01-example1-fig05.png"
+fig05_png = "output/case-study01-example1-fig05.png"
 draw(PNG(fig05_png, 12inch, 8inch, dpi=300), fig05)
 
