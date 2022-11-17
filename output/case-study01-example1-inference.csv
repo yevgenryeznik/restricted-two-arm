@@ -1,0 +1,577 @@
+design,model,scenario,xintercept,variable,value
+RAND,"Errors N(0, 1)",Null,5.0,t_test,4.73
+RAND,Linear trend,Null,5.0,t_test,4.9
+RAND,Errors Caushy,Null,5.0,t_test,2.59
+RAND,Selection bias,Null,5.0,t_test,7.539999999999999
+TBD,"Errors N(0, 1)",Null,5.0,t_test,4.8500000000000005
+TBD,Linear trend,Null,5.0,t_test,20.11
+TBD,Errors Caushy,Null,5.0,t_test,2.67
+TBD,Selection bias,Null,5.0,t_test,5.949999999999999
+PBD(2),"Errors N(0, 1)",Null,5.0,t_test,4.62
+PBD(2),Linear trend,Null,5.0,t_test,0.06999999999999999
+PBD(2),Errors Caushy,Null,5.0,t_test,2.21
+PBD(2),Selection bias,Null,5.0,t_test,39.01
+PBD(4),"Errors N(0, 1)",Null,5.0,t_test,5.07
+PBD(4),Linear trend,Null,5.0,t_test,0.21
+PBD(4),Errors Caushy,Null,5.0,t_test,2.73
+PBD(4),Selection bias,Null,5.0,t_test,26.85
+BSD(3),"Errors N(0, 1)",Null,5.0,t_test,4.89
+BSD(3),Linear trend,Null,5.0,t_test,0.59
+BSD(3),Errors Caushy,Null,5.0,t_test,2.62
+BSD(3),Selection bias,Null,5.0,t_test,6.97
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Null,5.0,t_test,4.78
+"BCDWIT(2/3, 3)",Linear trend,Null,5.0,t_test,0.16
+"BCDWIT(2/3, 3)",Errors Caushy,Null,5.0,t_test,2.53
+"BCDWIT(2/3, 3)",Selection bias,Null,5.0,t_test,14.39
+EBCD(2/3),"Errors N(0, 1)",Null,5.0,t_test,5.0
+EBCD(2/3),Linear trend,Null,5.0,t_test,1.0699999999999998
+EBCD(2/3),Errors Caushy,Null,5.0,t_test,2.73
+EBCD(2/3),Selection bias,Null,5.0,t_test,12.34
+ABCD(2),"Errors N(0, 1)",Null,5.0,t_test,5.140000000000001
+ABCD(2),Linear trend,Null,5.0,t_test,0.32
+ABCD(2),Errors Caushy,Null,5.0,t_test,2.39
+ABCD(2),Selection bias,Null,5.0,t_test,9.180000000000001
+GBCD(1),"Errors N(0, 1)",Null,5.0,t_test,4.8500000000000005
+GBCD(1),Linear trend,Null,5.0,t_test,1.8900000000000001
+GBCD(1),Errors Caushy,Null,5.0,t_test,2.9499999999999997
+GBCD(1),Selection bias,Null,5.0,t_test,7.46
+GBCD(2),"Errors N(0, 1)",Null,5.0,t_test,5.0200000000000005
+GBCD(2),Linear trend,Null,5.0,t_test,1.0699999999999998
+GBCD(2),Errors Caushy,Null,5.0,t_test,2.6
+GBCD(2),Selection bias,Null,5.0,t_test,8.92
+GBCD(5),"Errors N(0, 1)",Null,5.0,t_test,4.6
+GBCD(5),Linear trend,Null,5.0,t_test,0.45999999999999996
+GBCD(5),Errors Caushy,Null,5.0,t_test,2.9499999999999997
+GBCD(5),Selection bias,Null,5.0,t_test,12.94
+CRD,"Errors N(0, 1)",Null,5.0,t_test,5.09
+CRD,Linear trend,Null,5.0,t_test,5.029999999999999
+CRD,Errors Caushy,Null,5.0,t_test,2.88
+CRD,Selection bias,Null,5.0,t_test,5.34
+RAND,"Errors N(0, 1)",Alternative 1,70.0,t_test,71.53
+RAND,Linear trend,Alternative 1,70.0,t_test,29.67
+RAND,Errors Caushy,Alternative 1,70.0,t_test,12.06
+RAND,Selection bias,Alternative 1,70.0,t_test,83.44
+TBD,"Errors N(0, 1)",Alternative 1,70.0,t_test,71.89999999999999
+TBD,Linear trend,Alternative 1,70.0,t_test,38.440000000000005
+TBD,Errors Caushy,Alternative 1,70.0,t_test,12.1
+TBD,Selection bias,Alternative 1,70.0,t_test,80.28
+PBD(2),"Errors N(0, 1)",Alternative 1,70.0,t_test,71.96000000000001
+PBD(2),Linear trend,Alternative 1,70.0,t_test,18.310000000000002
+PBD(2),Errors Caushy,Alternative 1,70.0,t_test,12.5
+PBD(2),Selection bias,Alternative 1,70.0,t_test,98.77
+PBD(4),"Errors N(0, 1)",Alternative 1,70.0,t_test,72.08
+PBD(4),Linear trend,Alternative 1,70.0,t_test,20.1
+PBD(4),Errors Caushy,Alternative 1,70.0,t_test,11.24
+PBD(4),Selection bias,Alternative 1,70.0,t_test,96.82
+BSD(3),"Errors N(0, 1)",Alternative 1,70.0,t_test,71.93
+BSD(3),Linear trend,Alternative 1,70.0,t_test,22.939999999999998
+BSD(3),Errors Caushy,Alternative 1,70.0,t_test,11.84
+BSD(3),Selection bias,Alternative 1,70.0,t_test,83.5
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Alternative 1,70.0,t_test,71.22
+"BCDWIT(2/3, 3)",Linear trend,Alternative 1,70.0,t_test,20.75
+"BCDWIT(2/3, 3)",Errors Caushy,Alternative 1,70.0,t_test,12.26
+"BCDWIT(2/3, 3)",Selection bias,Alternative 1,70.0,t_test,91.36
+EBCD(2/3),"Errors N(0, 1)",Alternative 1,70.0,t_test,71.61
+EBCD(2/3),Linear trend,Alternative 1,70.0,t_test,23.36
+EBCD(2/3),Errors Caushy,Alternative 1,70.0,t_test,12.27
+EBCD(2/3),Selection bias,Alternative 1,70.0,t_test,88.92999999999999
+ABCD(2),"Errors N(0, 1)",Alternative 1,70.0,t_test,72.25
+ABCD(2),Linear trend,Alternative 1,70.0,t_test,21.59
+ABCD(2),Errors Caushy,Alternative 1,70.0,t_test,12.0
+ABCD(2),Selection bias,Alternative 1,70.0,t_test,87.11
+GBCD(1),"Errors N(0, 1)",Alternative 1,70.0,t_test,71.06
+GBCD(1),Linear trend,Alternative 1,70.0,t_test,26.919999999999998
+GBCD(1),Errors Caushy,Alternative 1,70.0,t_test,12.27
+GBCD(1),Selection bias,Alternative 1,70.0,t_test,81.8
+GBCD(2),"Errors N(0, 1)",Alternative 1,70.0,t_test,71.45
+GBCD(2),Linear trend,Alternative 1,70.0,t_test,24.94
+GBCD(2),Errors Caushy,Alternative 1,70.0,t_test,12.23
+GBCD(2),Selection bias,Alternative 1,70.0,t_test,85.24000000000001
+GBCD(5),"Errors N(0, 1)",Alternative 1,70.0,t_test,71.76
+GBCD(5),Linear trend,Alternative 1,70.0,t_test,22.58
+GBCD(5),Errors Caushy,Alternative 1,70.0,t_test,12.76
+GBCD(5),Selection bias,Alternative 1,70.0,t_test,90.86999999999999
+CRD,"Errors N(0, 1)",Alternative 1,70.0,t_test,71.36
+CRD,Linear trend,Alternative 1,70.0,t_test,29.580000000000002
+CRD,Errors Caushy,Alternative 1,70.0,t_test,12.740000000000002
+CRD,Selection bias,Alternative 1,70.0,t_test,75.03999999999999
+RAND,"Errors N(0, 1)",Alternative 2,80.0,t_test,80.94
+RAND,Linear trend,Alternative 2,80.0,t_test,36.27
+RAND,Errors Caushy,Alternative 2,80.0,t_test,14.469999999999999
+RAND,Selection bias,Alternative 2,80.0,t_test,90.25
+TBD,"Errors N(0, 1)",Alternative 2,80.0,t_test,81.33
+TBD,Linear trend,Alternative 2,80.0,t_test,42.05
+TBD,Errors Caushy,Alternative 2,80.0,t_test,14.52
+TBD,Selection bias,Alternative 2,80.0,t_test,87.55
+PBD(2),"Errors N(0, 1)",Alternative 2,80.0,t_test,81.01
+PBD(2),Linear trend,Alternative 2,80.0,t_test,27.839999999999996
+PBD(2),Errors Caushy,Alternative 2,80.0,t_test,14.63
+PBD(2),Selection bias,Alternative 2,80.0,t_test,99.4
+PBD(4),"Errors N(0, 1)",Alternative 2,80.0,t_test,81.69
+PBD(4),Linear trend,Alternative 2,80.0,t_test,29.64
+PBD(4),Errors Caushy,Alternative 2,80.0,t_test,13.389999999999999
+PBD(4),Selection bias,Alternative 2,80.0,t_test,98.42999999999999
+BSD(3),"Errors N(0, 1)",Alternative 2,80.0,t_test,81.14
+BSD(3),Linear trend,Alternative 2,80.0,t_test,31.72
+BSD(3),Errors Caushy,Alternative 2,80.0,t_test,13.930000000000001
+BSD(3),Selection bias,Alternative 2,80.0,t_test,89.73
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Alternative 2,80.0,t_test,80.74
+"BCDWIT(2/3, 3)",Linear trend,Alternative 2,80.0,t_test,29.330000000000002
+"BCDWIT(2/3, 3)",Errors Caushy,Alternative 2,80.0,t_test,14.48
+"BCDWIT(2/3, 3)",Selection bias,Alternative 2,80.0,t_test,95.04
+EBCD(2/3),"Errors N(0, 1)",Alternative 2,80.0,t_test,80.92
+EBCD(2/3),Linear trend,Alternative 2,80.0,t_test,31.619999999999997
+EBCD(2/3),Errors Caushy,Alternative 2,80.0,t_test,14.82
+EBCD(2/3),Selection bias,Alternative 2,80.0,t_test,93.28
+ABCD(2),"Errors N(0, 1)",Alternative 2,80.0,t_test,81.39
+ABCD(2),Linear trend,Alternative 2,80.0,t_test,30.09
+ABCD(2),Errors Caushy,Alternative 2,80.0,t_test,14.41
+ABCD(2),Selection bias,Alternative 2,80.0,t_test,92.17
+GBCD(1),"Errors N(0, 1)",Alternative 2,80.0,t_test,80.49
+GBCD(1),Linear trend,Alternative 2,80.0,t_test,34.33
+GBCD(1),Errors Caushy,Alternative 2,80.0,t_test,14.44
+GBCD(1),Selection bias,Alternative 2,80.0,t_test,88.75
+GBCD(2),"Errors N(0, 1)",Alternative 2,80.0,t_test,81.08999999999999
+GBCD(2),Linear trend,Alternative 2,80.0,t_test,32.65
+GBCD(2),Errors Caushy,Alternative 2,80.0,t_test,14.649999999999999
+GBCD(2),Selection bias,Alternative 2,80.0,t_test,90.61
+GBCD(5),"Errors N(0, 1)",Alternative 2,80.0,t_test,81.5
+GBCD(5),Linear trend,Alternative 2,80.0,t_test,31.2
+GBCD(5),Errors Caushy,Alternative 2,80.0,t_test,15.14
+GBCD(5),Selection bias,Alternative 2,80.0,t_test,94.84
+CRD,"Errors N(0, 1)",Alternative 2,80.0,t_test,80.4
+CRD,Linear trend,Alternative 2,80.0,t_test,35.86
+CRD,Errors Caushy,Alternative 2,80.0,t_test,15.010000000000002
+CRD,Selection bias,Alternative 2,80.0,t_test,83.84
+RAND,"Errors N(0, 1)",Alternative 3,90.0,t_test,91.32000000000001
+RAND,Linear trend,Alternative 3,90.0,t_test,46.36
+RAND,Errors Caushy,Alternative 3,90.0,t_test,17.71
+RAND,Selection bias,Alternative 3,90.0,t_test,95.93
+TBD,"Errors N(0, 1)",Alternative 3,90.0,t_test,91.0
+TBD,Linear trend,Alternative 3,90.0,t_test,48.69
+TBD,Errors Caushy,Alternative 3,90.0,t_test,17.630000000000003
+TBD,Selection bias,Alternative 3,90.0,t_test,94.71000000000001
+PBD(2),"Errors N(0, 1)",Alternative 3,90.0,t_test,90.98
+PBD(2),Linear trend,Alternative 3,90.0,t_test,44.09
+PBD(2),Errors Caushy,Alternative 3,90.0,t_test,18.35
+PBD(2),Selection bias,Alternative 3,90.0,t_test,99.81
+PBD(4),"Errors N(0, 1)",Alternative 3,90.0,t_test,90.78
+PBD(4),Linear trend,Alternative 3,90.0,t_test,44.800000000000004
+PBD(4),Errors Caushy,Alternative 3,90.0,t_test,16.85
+PBD(4),Selection bias,Alternative 3,90.0,t_test,99.5
+BSD(3),"Errors N(0, 1)",Alternative 3,90.0,t_test,90.77
+BSD(3),Linear trend,Alternative 3,90.0,t_test,45.800000000000004
+BSD(3),Errors Caushy,Alternative 3,90.0,t_test,17.349999999999998
+BSD(3),Selection bias,Alternative 3,90.0,t_test,95.66
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Alternative 3,90.0,t_test,90.86999999999999
+"BCDWIT(2/3, 3)",Linear trend,Alternative 3,90.0,t_test,44.62
+"BCDWIT(2/3, 3)",Errors Caushy,Alternative 3,90.0,t_test,17.97
+"BCDWIT(2/3, 3)",Selection bias,Alternative 3,90.0,t_test,98.19
+EBCD(2/3),"Errors N(0, 1)",Alternative 3,90.0,t_test,90.56
+EBCD(2/3),Linear trend,Alternative 3,90.0,t_test,45.86
+EBCD(2/3),Errors Caushy,Alternative 3,90.0,t_test,18.34
+EBCD(2/3),Selection bias,Alternative 3,90.0,t_test,97.2
+ABCD(2),"Errors N(0, 1)",Alternative 3,90.0,t_test,90.77
+ABCD(2),Linear trend,Alternative 3,90.0,t_test,45.300000000000004
+ABCD(2),Errors Caushy,Alternative 3,90.0,t_test,18.11
+ABCD(2),Selection bias,Alternative 3,90.0,t_test,96.82
+GBCD(1),"Errors N(0, 1)",Alternative 3,90.0,t_test,90.94
+GBCD(1),Linear trend,Alternative 3,90.0,t_test,45.86
+GBCD(1),Errors Caushy,Alternative 3,90.0,t_test,17.75
+GBCD(1),Selection bias,Alternative 3,90.0,t_test,95.09
+GBCD(2),"Errors N(0, 1)",Alternative 3,90.0,t_test,90.28
+GBCD(2),Linear trend,Alternative 3,90.0,t_test,45.45
+GBCD(2),Errors Caushy,Alternative 3,90.0,t_test,18.12
+GBCD(2),Selection bias,Alternative 3,90.0,t_test,95.93
+GBCD(5),"Errors N(0, 1)",Alternative 3,90.0,t_test,91.17
+GBCD(5),Linear trend,Alternative 3,90.0,t_test,45.410000000000004
+GBCD(5),Errors Caushy,Alternative 3,90.0,t_test,18.55
+GBCD(5),Selection bias,Alternative 3,90.0,t_test,98.04
+CRD,"Errors N(0, 1)",Alternative 3,90.0,t_test,90.3
+CRD,Linear trend,Alternative 3,90.0,t_test,45.43
+CRD,Errors Caushy,Alternative 3,90.0,t_test,18.52
+CRD,Selection bias,Alternative 3,90.0,t_test,92.11
+RAND,"Errors N(0, 1)",Null,5.0,rando_test,4.75
+RAND,Linear trend,Null,5.0,rando_test,4.91
+RAND,Errors Caushy,Null,5.0,rando_test,5.7
+RAND,Selection bias,Null,5.0,rando_test,7.53
+TBD,"Errors N(0, 1)",Null,5.0,rando_test,4.75
+TBD,Linear trend,Null,5.0,rando_test,4.78
+TBD,Errors Caushy,Null,5.0,rando_test,5.64
+TBD,Selection bias,Null,5.0,rando_test,5.4399999999999995
+PBD(2),"Errors N(0, 1)",Null,5.0,rando_test,4.71
+PBD(2),Linear trend,Null,5.0,rando_test,4.68
+PBD(2),Errors Caushy,Null,5.0,rando_test,4.89
+PBD(2),Selection bias,Null,5.0,rando_test,39.900000000000006
+PBD(4),"Errors N(0, 1)",Null,5.0,rando_test,5.2
+PBD(4),Linear trend,Null,5.0,rando_test,5.3
+PBD(4),Errors Caushy,Null,5.0,rando_test,5.36
+PBD(4),Selection bias,Null,5.0,rando_test,28.37
+BSD(3),"Errors N(0, 1)",Null,5.0,rando_test,4.89
+BSD(3),Linear trend,Null,5.0,rando_test,4.91
+BSD(3),Errors Caushy,Null,5.0,rando_test,5.680000000000001
+BSD(3),Selection bias,Null,5.0,rando_test,7.55
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Null,5.0,rando_test,4.72
+"BCDWIT(2/3, 3)",Linear trend,Null,5.0,rando_test,4.82
+"BCDWIT(2/3, 3)",Errors Caushy,Null,5.0,rando_test,5.59
+"BCDWIT(2/3, 3)",Selection bias,Null,5.0,rando_test,15.2
+EBCD(2/3),"Errors N(0, 1)",Null,5.0,rando_test,4.88
+EBCD(2/3),Linear trend,Null,5.0,rando_test,5.09
+EBCD(2/3),Errors Caushy,Null,5.0,rando_test,5.63
+EBCD(2/3),Selection bias,Null,5.0,rando_test,12.920000000000002
+ABCD(2),"Errors N(0, 1)",Null,5.0,rando_test,5.11
+ABCD(2),Linear trend,Null,5.0,rando_test,4.95
+ABCD(2),Errors Caushy,Null,5.0,rando_test,5.18
+ABCD(2),Selection bias,Null,5.0,rando_test,10.11
+GBCD(1),"Errors N(0, 1)",Null,5.0,rando_test,4.84
+GBCD(1),Linear trend,Null,5.0,rando_test,5.029999999999999
+GBCD(1),Errors Caushy,Null,5.0,rando_test,5.91
+GBCD(1),Selection bias,Null,5.0,rando_test,7.61
+GBCD(2),"Errors N(0, 1)",Null,5.0,rando_test,4.97
+GBCD(2),Linear trend,Null,5.0,rando_test,5.21
+GBCD(2),Errors Caushy,Null,5.0,rando_test,5.8999999999999995
+GBCD(2),Selection bias,Null,5.0,rando_test,9.28
+GBCD(5),"Errors N(0, 1)",Null,5.0,rando_test,4.78
+GBCD(5),Linear trend,Null,5.0,rando_test,4.96
+GBCD(5),Errors Caushy,Null,5.0,rando_test,5.89
+GBCD(5),Selection bias,Null,5.0,rando_test,13.669999999999998
+CRD,"Errors N(0, 1)",Null,5.0,rando_test,5.08
+CRD,Linear trend,Null,5.0,rando_test,5.029999999999999
+CRD,Errors Caushy,Null,5.0,rando_test,6.45
+CRD,Selection bias,Null,5.0,rando_test,5.37
+RAND,"Errors N(0, 1)",Alternative 1,70.0,rando_test,71.59
+RAND,Linear trend,Alternative 1,70.0,rando_test,29.709999999999997
+RAND,Errors Caushy,Alternative 1,70.0,rando_test,19.6
+RAND,Selection bias,Alternative 1,70.0,rando_test,83.31
+TBD,"Errors N(0, 1)",Alternative 1,70.0,rando_test,71.45
+TBD,Linear trend,Alternative 1,70.0,rando_test,16.21
+TBD,Errors Caushy,Alternative 1,70.0,rando_test,19.3
+TBD,Selection bias,Alternative 1,70.0,rando_test,77.66
+PBD(2),"Errors N(0, 1)",Alternative 1,70.0,rando_test,70.34
+PBD(2),Linear trend,Alternative 1,70.0,rando_test,70.03
+PBD(2),Errors Caushy,Alternative 1,70.0,rando_test,18.310000000000002
+PBD(2),Selection bias,Alternative 1,70.0,rando_test,98.78
+PBD(4),"Errors N(0, 1)",Alternative 1,70.0,rando_test,71.46000000000001
+PBD(4),Linear trend,Alternative 1,70.0,rando_test,63.85999999999999
+PBD(4),Errors Caushy,Alternative 1,70.0,rando_test,17.75
+PBD(4),Selection bias,Alternative 1,70.0,rando_test,96.96000000000001
+BSD(3),"Errors N(0, 1)",Alternative 1,70.0,rando_test,71.39
+BSD(3),Linear trend,Alternative 1,70.0,rando_test,54.800000000000004
+BSD(3),Errors Caushy,Alternative 1,70.0,rando_test,18.12
+BSD(3),Selection bias,Alternative 1,70.0,rando_test,84.44
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Alternative 1,70.0,rando_test,70.89999999999999
+"BCDWIT(2/3, 3)",Linear trend,Alternative 1,70.0,rando_test,60.12
+"BCDWIT(2/3, 3)",Errors Caushy,Alternative 1,70.0,rando_test,19.12
+"BCDWIT(2/3, 3)",Selection bias,Alternative 1,70.0,rando_test,91.97999999999999
+EBCD(2/3),"Errors N(0, 1)",Alternative 1,70.0,rando_test,71.48
+EBCD(2/3),Linear trend,Alternative 1,70.0,rando_test,49.75
+EBCD(2/3),Errors Caushy,Alternative 1,70.0,rando_test,18.95
+EBCD(2/3),Selection bias,Alternative 1,70.0,rando_test,89.57000000000001
+ABCD(2),"Errors N(0, 1)",Alternative 1,70.0,rando_test,72.03
+ABCD(2),Linear trend,Alternative 1,70.0,rando_test,58.32000000000001
+ABCD(2),Errors Caushy,Alternative 1,70.0,rando_test,18.56
+ABCD(2),Selection bias,Alternative 1,70.0,rando_test,88.2
+GBCD(1),"Errors N(0, 1)",Alternative 1,70.0,rando_test,70.89
+GBCD(1),Linear trend,Alternative 1,70.0,rando_test,41.04
+GBCD(1),Errors Caushy,Alternative 1,70.0,rando_test,18.4
+GBCD(1),Selection bias,Alternative 1,70.0,rando_test,82.1
+GBCD(2),"Errors N(0, 1)",Alternative 1,70.0,rando_test,71.31
+GBCD(2),Linear trend,Alternative 1,70.0,rando_test,45.989999999999995
+GBCD(2),Errors Caushy,Alternative 1,70.0,rando_test,18.38
+GBCD(2),Selection bias,Alternative 1,70.0,rando_test,85.74000000000001
+GBCD(5),"Errors N(0, 1)",Alternative 1,70.0,rando_test,71.47
+GBCD(5),Linear trend,Alternative 1,70.0,rando_test,54.910000000000004
+GBCD(5),Errors Caushy,Alternative 1,70.0,rando_test,19.31
+GBCD(5),Selection bias,Alternative 1,70.0,rando_test,91.21000000000001
+CRD,"Errors N(0, 1)",Alternative 1,70.0,rando_test,71.22
+CRD,Linear trend,Alternative 1,70.0,rando_test,29.43
+CRD,Errors Caushy,Alternative 1,70.0,rando_test,18.15
+CRD,Selection bias,Alternative 1,70.0,rando_test,75.08
+RAND,"Errors N(0, 1)",Alternative 2,80.0,rando_test,80.82000000000001
+RAND,Linear trend,Alternative 2,80.0,rando_test,36.32
+RAND,Errors Caushy,Alternative 2,80.0,rando_test,22.689999999999998
+RAND,Selection bias,Alternative 2,80.0,rando_test,90.23
+TBD,"Errors N(0, 1)",Alternative 2,80.0,rando_test,81.03
+TBD,Linear trend,Alternative 2,80.0,rando_test,19.25
+TBD,Errors Caushy,Alternative 2,80.0,rando_test,22.400000000000002
+TBD,Selection bias,Alternative 2,80.0,rando_test,85.65
+PBD(2),"Errors N(0, 1)",Alternative 2,80.0,rando_test,79.73
+PBD(2),Linear trend,Alternative 2,80.0,rando_test,79.64
+PBD(2),Errors Caushy,Alternative 2,80.0,rando_test,21.36
+PBD(2),Selection bias,Alternative 2,80.0,rando_test,99.41
+PBD(4),"Errors N(0, 1)",Alternative 2,80.0,rando_test,81.0
+PBD(4),Linear trend,Alternative 2,80.0,rando_test,74.11999999999999
+PBD(4),Errors Caushy,Alternative 2,80.0,rando_test,20.5
+PBD(4),Selection bias,Alternative 2,80.0,rando_test,98.55000000000001
+BSD(3),"Errors N(0, 1)",Alternative 2,80.0,rando_test,81.02000000000001
+BSD(3),Linear trend,Alternative 2,80.0,rando_test,64.71000000000001
+BSD(3),Errors Caushy,Alternative 2,80.0,rando_test,21.04
+BSD(3),Selection bias,Alternative 2,80.0,rando_test,90.72
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Alternative 2,80.0,rando_test,80.69
+"BCDWIT(2/3, 3)",Linear trend,Alternative 2,80.0,rando_test,70.53
+"BCDWIT(2/3, 3)",Errors Caushy,Alternative 2,80.0,rando_test,21.92
+"BCDWIT(2/3, 3)",Selection bias,Alternative 2,80.0,rando_test,95.52000000000001
+EBCD(2/3),"Errors N(0, 1)",Alternative 2,80.0,rando_test,80.92
+EBCD(2/3),Linear trend,Alternative 2,80.0,rando_test,59.57
+EBCD(2/3),Errors Caushy,Alternative 2,80.0,rando_test,21.94
+EBCD(2/3),Selection bias,Alternative 2,80.0,rando_test,93.65
+ABCD(2),"Errors N(0, 1)",Alternative 2,80.0,rando_test,81.31
+ABCD(2),Linear trend,Alternative 2,80.0,rando_test,68.65
+ABCD(2),Errors Caushy,Alternative 2,80.0,rando_test,21.61
+ABCD(2),Selection bias,Alternative 2,80.0,rando_test,93.0
+GBCD(1),"Errors N(0, 1)",Alternative 2,80.0,rando_test,80.49
+GBCD(1),Linear trend,Alternative 2,80.0,rando_test,48.89
+GBCD(1),Errors Caushy,Alternative 2,80.0,rando_test,21.060000000000002
+GBCD(1),Selection bias,Alternative 2,80.0,rando_test,88.98
+GBCD(2),"Errors N(0, 1)",Alternative 2,80.0,rando_test,81.02000000000001
+GBCD(2),Linear trend,Alternative 2,80.0,rando_test,54.59
+GBCD(2),Errors Caushy,Alternative 2,80.0,rando_test,21.12
+GBCD(2),Selection bias,Alternative 2,80.0,rando_test,90.84
+GBCD(5),"Errors N(0, 1)",Alternative 2,80.0,rando_test,81.23
+GBCD(5),Linear trend,Alternative 2,80.0,rando_test,64.1
+GBCD(5),Errors Caushy,Alternative 2,80.0,rando_test,22.08
+GBCD(5),Selection bias,Alternative 2,80.0,rando_test,95.02000000000001
+CRD,"Errors N(0, 1)",Alternative 2,80.0,rando_test,80.43
+CRD,Linear trend,Alternative 2,80.0,rando_test,35.61
+CRD,Errors Caushy,Alternative 2,80.0,rando_test,20.68
+CRD,Selection bias,Alternative 2,80.0,rando_test,83.95
+RAND,"Errors N(0, 1)",Alternative 3,90.0,rando_test,91.31
+RAND,Linear trend,Alternative 3,90.0,rando_test,46.45
+RAND,Errors Caushy,Alternative 3,90.0,rando_test,26.57
+RAND,Selection bias,Alternative 3,90.0,rando_test,95.89999999999999
+TBD,"Errors N(0, 1)",Alternative 3,90.0,rando_test,90.85
+TBD,Linear trend,Alternative 3,90.0,rando_test,24.64
+TBD,Errors Caushy,Alternative 3,90.0,rando_test,26.529999999999998
+TBD,Selection bias,Alternative 3,90.0,rando_test,93.4
+PBD(2),"Errors N(0, 1)",Alternative 3,90.0,rando_test,89.74
+PBD(2),Linear trend,Alternative 3,90.0,rando_test,89.66
+PBD(2),Errors Caushy,Alternative 3,90.0,rando_test,25.77
+PBD(2),Selection bias,Alternative 3,90.0,rando_test,99.8
+PBD(4),"Errors N(0, 1)",Alternative 3,90.0,rando_test,90.5
+PBD(4),Linear trend,Alternative 3,90.0,rando_test,85.53
+PBD(4),Errors Caushy,Alternative 3,90.0,rando_test,24.79
+PBD(4),Selection bias,Alternative 3,90.0,rando_test,99.56
+BSD(3),"Errors N(0, 1)",Alternative 3,90.0,rando_test,90.77
+BSD(3),Linear trend,Alternative 3,90.0,rando_test,76.77000000000001
+BSD(3),Errors Caushy,Alternative 3,90.0,rando_test,25.52
+BSD(3),Selection bias,Alternative 3,90.0,rando_test,96.04
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Alternative 3,90.0,rando_test,90.73
+"BCDWIT(2/3, 3)",Linear trend,Alternative 3,90.0,rando_test,82.76
+"BCDWIT(2/3, 3)",Errors Caushy,Alternative 3,90.0,rando_test,26.179999999999996
+"BCDWIT(2/3, 3)",Selection bias,Alternative 3,90.0,rando_test,98.37
+EBCD(2/3),"Errors N(0, 1)",Alternative 3,90.0,rando_test,90.56
+EBCD(2/3),Linear trend,Alternative 3,90.0,rando_test,72.14
+EBCD(2/3),Errors Caushy,Alternative 3,90.0,rando_test,26.090000000000003
+EBCD(2/3),Selection bias,Alternative 3,90.0,rando_test,97.5
+ABCD(2),"Errors N(0, 1)",Alternative 3,90.0,rando_test,90.7
+ABCD(2),Linear trend,Alternative 3,90.0,rando_test,80.69
+ABCD(2),Errors Caushy,Alternative 3,90.0,rando_test,25.81
+ABCD(2),Selection bias,Alternative 3,90.0,rando_test,97.22
+GBCD(1),"Errors N(0, 1)",Alternative 3,90.0,rando_test,90.9
+GBCD(1),Linear trend,Alternative 3,90.0,rando_test,61.11
+GBCD(1),Errors Caushy,Alternative 3,90.0,rando_test,24.98
+GBCD(1),Selection bias,Alternative 3,90.0,rando_test,95.26
+GBCD(2),"Errors N(0, 1)",Alternative 3,90.0,rando_test,90.29
+GBCD(2),Linear trend,Alternative 3,90.0,rando_test,67.11
+GBCD(2),Errors Caushy,Alternative 3,90.0,rando_test,25.240000000000002
+GBCD(2),Selection bias,Alternative 3,90.0,rando_test,96.16
+GBCD(5),"Errors N(0, 1)",Alternative 3,90.0,rando_test,91.01
+GBCD(5),Linear trend,Alternative 3,90.0,rando_test,76.68
+GBCD(5),Errors Caushy,Alternative 3,90.0,rando_test,26.25
+GBCD(5),Selection bias,Alternative 3,90.0,rando_test,98.1
+CRD,"Errors N(0, 1)",Alternative 3,90.0,rando_test,90.36999999999999
+CRD,Linear trend,Alternative 3,90.0,rando_test,45.26
+CRD,Errors Caushy,Alternative 3,90.0,rando_test,24.54
+CRD,Selection bias,Alternative 3,90.0,rando_test,92.16
+RAND,"Errors N(0, 1)",Null,5.0,rando_test_ranks,4.99
+RAND,Linear trend,Null,5.0,rando_test_ranks,4.91
+RAND,Errors Caushy,Null,5.0,rando_test_ranks,5.11
+RAND,Selection bias,Null,5.0,rando_test_ranks,7.42
+TBD,"Errors N(0, 1)",Null,5.0,rando_test_ranks,4.7
+TBD,Linear trend,Null,5.0,rando_test_ranks,4.89
+TBD,Errors Caushy,Null,5.0,rando_test_ranks,5.26
+TBD,Selection bias,Null,5.0,rando_test_ranks,5.38
+PBD(2),"Errors N(0, 1)",Null,5.0,rando_test_ranks,4.58
+PBD(2),Linear trend,Null,5.0,rando_test_ranks,4.9399999999999995
+PBD(2),Errors Caushy,Null,5.0,rando_test_ranks,5.3100000000000005
+PBD(2),Selection bias,Null,5.0,rando_test_ranks,37.980000000000004
+PBD(4),"Errors N(0, 1)",Null,5.0,rando_test_ranks,5.24
+PBD(4),Linear trend,Null,5.0,rando_test_ranks,5.19
+PBD(4),Errors Caushy,Null,5.0,rando_test_ranks,5.56
+PBD(4),Selection bias,Null,5.0,rando_test_ranks,26.950000000000003
+BSD(3),"Errors N(0, 1)",Null,5.0,rando_test_ranks,4.9399999999999995
+BSD(3),Linear trend,Null,5.0,rando_test_ranks,4.91
+BSD(3),Errors Caushy,Null,5.0,rando_test_ranks,5.79
+BSD(3),Selection bias,Null,5.0,rando_test_ranks,7.5200000000000005
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Null,5.0,rando_test_ranks,4.73
+"BCDWIT(2/3, 3)",Linear trend,Null,5.0,rando_test_ranks,4.9
+"BCDWIT(2/3, 3)",Errors Caushy,Null,5.0,rando_test_ranks,5.81
+"BCDWIT(2/3, 3)",Selection bias,Null,5.0,rando_test_ranks,14.41
+EBCD(2/3),"Errors N(0, 1)",Null,5.0,rando_test_ranks,4.91
+EBCD(2/3),Linear trend,Null,5.0,rando_test_ranks,5.0200000000000005
+EBCD(2/3),Errors Caushy,Null,5.0,rando_test_ranks,5.81
+EBCD(2/3),Selection bias,Null,5.0,rando_test_ranks,12.629999999999999
+ABCD(2),"Errors N(0, 1)",Null,5.0,rando_test_ranks,5.16
+ABCD(2),Linear trend,Null,5.0,rando_test_ranks,4.91
+ABCD(2),Errors Caushy,Null,5.0,rando_test_ranks,5.17
+ABCD(2),Selection bias,Null,5.0,rando_test_ranks,9.8
+GBCD(1),"Errors N(0, 1)",Null,5.0,rando_test_ranks,4.8
+GBCD(1),Linear trend,Null,5.0,rando_test_ranks,5.01
+GBCD(1),Errors Caushy,Null,5.0,rando_test_ranks,5.65
+GBCD(1),Selection bias,Null,5.0,rando_test_ranks,7.51
+GBCD(2),"Errors N(0, 1)",Null,5.0,rando_test_ranks,5.06
+GBCD(2),Linear trend,Null,5.0,rando_test_ranks,5.24
+GBCD(2),Errors Caushy,Null,5.0,rando_test_ranks,5.55
+GBCD(2),Selection bias,Null,5.0,rando_test_ranks,8.73
+GBCD(5),"Errors N(0, 1)",Null,5.0,rando_test_ranks,4.92
+GBCD(5),Linear trend,Null,5.0,rando_test_ranks,4.96
+GBCD(5),Errors Caushy,Null,5.0,rando_test_ranks,5.7299999999999995
+GBCD(5),Selection bias,Null,5.0,rando_test_ranks,13.19
+CRD,"Errors N(0, 1)",Null,5.0,rando_test_ranks,4.9
+CRD,Linear trend,Null,5.0,rando_test_ranks,4.88
+CRD,Errors Caushy,Null,5.0,rando_test_ranks,5.35
+CRD,Selection bias,Null,5.0,rando_test_ranks,5.0200000000000005
+RAND,"Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,68.74
+RAND,Linear trend,Alternative 1,70.0,rando_test_ranks,26.919999999999998
+RAND,Errors Caushy,Alternative 1,70.0,rando_test_ranks,44.05
+RAND,Selection bias,Alternative 1,70.0,rando_test_ranks,81.02000000000001
+TBD,"Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,68.58
+TBD,Linear trend,Alternative 1,70.0,rando_test_ranks,15.25
+TBD,Errors Caushy,Alternative 1,70.0,rando_test_ranks,43.89
+TBD,Selection bias,Alternative 1,70.0,rando_test_ranks,75.22999999999999
+PBD(2),"Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,67.65
+PBD(2),Linear trend,Alternative 1,70.0,rando_test_ranks,65.2
+PBD(2),Errors Caushy,Alternative 1,70.0,rando_test_ranks,42.14
+PBD(2),Selection bias,Alternative 1,70.0,rando_test_ranks,98.11999999999999
+PBD(4),"Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,69.11
+PBD(4),Linear trend,Alternative 1,70.0,rando_test_ranks,59.940000000000005
+PBD(4),Errors Caushy,Alternative 1,70.0,rando_test_ranks,43.580000000000005
+PBD(4),Selection bias,Alternative 1,70.0,rando_test_ranks,96.34
+BSD(3),"Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,69.45
+BSD(3),Linear trend,Alternative 1,70.0,rando_test_ranks,50.870000000000005
+BSD(3),Errors Caushy,Alternative 1,70.0,rando_test_ranks,43.82
+BSD(3),Selection bias,Alternative 1,70.0,rando_test_ranks,82.3
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,68.64
+"BCDWIT(2/3, 3)",Linear trend,Alternative 1,70.0,rando_test_ranks,56.08
+"BCDWIT(2/3, 3)",Errors Caushy,Alternative 1,70.0,rando_test_ranks,43.61
+"BCDWIT(2/3, 3)",Selection bias,Alternative 1,70.0,rando_test_ranks,90.47
+EBCD(2/3),"Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,69.08999999999999
+EBCD(2/3),Linear trend,Alternative 1,70.0,rando_test_ranks,45.94
+EBCD(2/3),Errors Caushy,Alternative 1,70.0,rando_test_ranks,43.54
+EBCD(2/3),Selection bias,Alternative 1,70.0,rando_test_ranks,87.64999999999999
+ABCD(2),"Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,69.53
+ABCD(2),Linear trend,Alternative 1,70.0,rando_test_ranks,54.67999999999999
+ABCD(2),Errors Caushy,Alternative 1,70.0,rando_test_ranks,44.230000000000004
+ABCD(2),Selection bias,Alternative 1,70.0,rando_test_ranks,86.09
+GBCD(1),"Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,68.53
+GBCD(1),Linear trend,Alternative 1,70.0,rando_test_ranks,37.07
+GBCD(1),Errors Caushy,Alternative 1,70.0,rando_test_ranks,43.59
+GBCD(1),Selection bias,Alternative 1,70.0,rando_test_ranks,79.7
+GBCD(2),"Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,68.71000000000001
+GBCD(2),Linear trend,Alternative 1,70.0,rando_test_ranks,41.72
+GBCD(2),Errors Caushy,Alternative 1,70.0,rando_test_ranks,44.32
+GBCD(2),Selection bias,Alternative 1,70.0,rando_test_ranks,83.46000000000001
+GBCD(5),"Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,69.17
+GBCD(5),Linear trend,Alternative 1,70.0,rando_test_ranks,50.68
+GBCD(5),Errors Caushy,Alternative 1,70.0,rando_test_ranks,43.65
+GBCD(5),Selection bias,Alternative 1,70.0,rando_test_ranks,89.63
+CRD,"Errors N(0, 1)",Alternative 1,70.0,rando_test_ranks,68.62
+CRD,Linear trend,Alternative 1,70.0,rando_test_ranks,26.58
+CRD,Errors Caushy,Alternative 1,70.0,rando_test_ranks,42.88
+CRD,Selection bias,Alternative 1,70.0,rando_test_ranks,72.88
+RAND,"Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,78.75
+RAND,Linear trend,Alternative 2,80.0,rando_test_ranks,32.550000000000004
+RAND,Errors Caushy,Alternative 2,80.0,rando_test_ranks,52.44
+RAND,Selection bias,Alternative 2,80.0,rando_test_ranks,88.35
+TBD,"Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,78.81
+TBD,Linear trend,Alternative 2,80.0,rando_test_ranks,17.93
+TBD,Errors Caushy,Alternative 2,80.0,rando_test_ranks,51.800000000000004
+TBD,Selection bias,Alternative 2,80.0,rando_test_ranks,83.75
+PBD(2),"Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,77.24
+PBD(2),Linear trend,Alternative 2,80.0,rando_test_ranks,75.36
+PBD(2),Errors Caushy,Alternative 2,80.0,rando_test_ranks,50.49
+PBD(2),Selection bias,Alternative 2,80.0,rando_test_ranks,99.13
+PBD(4),"Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,78.78
+PBD(4),Linear trend,Alternative 2,80.0,rando_test_ranks,69.89999999999999
+PBD(4),Errors Caushy,Alternative 2,80.0,rando_test_ranks,51.15
+PBD(4),Selection bias,Alternative 2,80.0,rando_test_ranks,98.05
+BSD(3),"Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,78.62
+BSD(3),Linear trend,Alternative 2,80.0,rando_test_ranks,60.27
+BSD(3),Errors Caushy,Alternative 2,80.0,rando_test_ranks,52.0
+BSD(3),Selection bias,Alternative 2,80.0,rando_test_ranks,89.02
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,78.45
+"BCDWIT(2/3, 3)",Linear trend,Alternative 2,80.0,rando_test_ranks,66.53999999999999
+"BCDWIT(2/3, 3)",Errors Caushy,Alternative 2,80.0,rando_test_ranks,51.94
+"BCDWIT(2/3, 3)",Selection bias,Alternative 2,80.0,rando_test_ranks,94.36
+EBCD(2/3),"Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,78.66
+EBCD(2/3),Linear trend,Alternative 2,80.0,rando_test_ranks,54.84
+EBCD(2/3),Errors Caushy,Alternative 2,80.0,rando_test_ranks,51.5
+EBCD(2/3),Selection bias,Alternative 2,80.0,rando_test_ranks,92.58999999999999
+ABCD(2),"Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,78.97999999999999
+ABCD(2),Linear trend,Alternative 2,80.0,rando_test_ranks,64.58
+ABCD(2),Errors Caushy,Alternative 2,80.0,rando_test_ranks,52.400000000000006
+ABCD(2),Selection bias,Alternative 2,80.0,rando_test_ranks,91.72
+GBCD(1),"Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,78.34
+GBCD(1),Linear trend,Alternative 2,80.0,rando_test_ranks,44.66
+GBCD(1),Errors Caushy,Alternative 2,80.0,rando_test_ranks,51.580000000000005
+GBCD(1),Selection bias,Alternative 2,80.0,rando_test_ranks,87.28
+GBCD(2),"Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,78.59
+GBCD(2),Linear trend,Alternative 2,80.0,rando_test_ranks,50.11
+GBCD(2),Errors Caushy,Alternative 2,80.0,rando_test_ranks,51.980000000000004
+GBCD(2),Selection bias,Alternative 2,80.0,rando_test_ranks,89.53999999999999
+GBCD(5),"Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,78.64
+GBCD(5),Linear trend,Alternative 2,80.0,rando_test_ranks,59.98
+GBCD(5),Errors Caushy,Alternative 2,80.0,rando_test_ranks,51.92
+GBCD(5),Selection bias,Alternative 2,80.0,rando_test_ranks,94.06
+CRD,"Errors N(0, 1)",Alternative 2,80.0,rando_test_ranks,78.03999999999999
+CRD,Linear trend,Alternative 2,80.0,rando_test_ranks,32.07
+CRD,Errors Caushy,Alternative 2,80.0,rando_test_ranks,51.24999999999999
+CRD,Selection bias,Alternative 2,80.0,rando_test_ranks,81.43
+RAND,"Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,89.45
+RAND,Linear trend,Alternative 3,90.0,rando_test_ranks,41.91
+RAND,Errors Caushy,Alternative 3,90.0,rando_test_ranks,63.7
+RAND,Selection bias,Alternative 3,90.0,rando_test_ranks,94.86
+TBD,"Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,88.9
+TBD,Linear trend,Alternative 3,90.0,rando_test_ranks,22.67
+TBD,Errors Caushy,Alternative 3,90.0,rando_test_ranks,63.01
+TBD,Selection bias,Alternative 3,90.0,rando_test_ranks,91.9
+PBD(2),"Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,87.99
+PBD(2),Linear trend,Alternative 3,90.0,rando_test_ranks,86.52
+PBD(2),Errors Caushy,Alternative 3,90.0,rando_test_ranks,61.57
+PBD(2),Selection bias,Alternative 3,90.0,rando_test_ranks,99.74
+PBD(4),"Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,89.33
+PBD(4),Linear trend,Alternative 3,90.0,rando_test_ranks,82.44
+PBD(4),Errors Caushy,Alternative 3,90.0,rando_test_ranks,62.69
+PBD(4),Selection bias,Alternative 3,90.0,rando_test_ranks,99.32
+BSD(3),"Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,88.99000000000001
+BSD(3),Linear trend,Alternative 3,90.0,rando_test_ranks,72.57000000000001
+BSD(3),Errors Caushy,Alternative 3,90.0,rando_test_ranks,63.24999999999999
+BSD(3),Selection bias,Alternative 3,90.0,rando_test_ranks,95.17
+"BCDWIT(2/3, 3)","Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,89.11
+"BCDWIT(2/3, 3)",Linear trend,Alternative 3,90.0,rando_test_ranks,78.86
+"BCDWIT(2/3, 3)",Errors Caushy,Alternative 3,90.0,rando_test_ranks,63.0
+"BCDWIT(2/3, 3)",Selection bias,Alternative 3,90.0,rando_test_ranks,97.85000000000001
+EBCD(2/3),"Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,88.84
+EBCD(2/3),Linear trend,Alternative 3,90.0,rando_test_ranks,67.72
+EBCD(2/3),Errors Caushy,Alternative 3,90.0,rando_test_ranks,62.88
+EBCD(2/3),Selection bias,Alternative 3,90.0,rando_test_ranks,96.73
+ABCD(2),"Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,89.25
+ABCD(2),Linear trend,Alternative 3,90.0,rando_test_ranks,77.22
+ABCD(2),Errors Caushy,Alternative 3,90.0,rando_test_ranks,63.36000000000001
+ABCD(2),Selection bias,Alternative 3,90.0,rando_test_ranks,96.67
+GBCD(1),"Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,89.45
+GBCD(1),Linear trend,Alternative 3,90.0,rando_test_ranks,55.97
+GBCD(1),Errors Caushy,Alternative 3,90.0,rando_test_ranks,62.59
+GBCD(1),Selection bias,Alternative 3,90.0,rando_test_ranks,93.62
+GBCD(2),"Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,88.91
+GBCD(2),Linear trend,Alternative 3,90.0,rando_test_ranks,62.160000000000004
+GBCD(2),Errors Caushy,Alternative 3,90.0,rando_test_ranks,62.93
+GBCD(2),Selection bias,Alternative 3,90.0,rando_test_ranks,95.25
+GBCD(5),"Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,89.37
+GBCD(5),Linear trend,Alternative 3,90.0,rando_test_ranks,72.39999999999999
+GBCD(5),Errors Caushy,Alternative 3,90.0,rando_test_ranks,62.580000000000005
+GBCD(5),Selection bias,Alternative 3,90.0,rando_test_ranks,97.61
+CRD,"Errors N(0, 1)",Alternative 3,90.0,rando_test_ranks,88.41
+CRD,Linear trend,Alternative 3,90.0,rando_test_ranks,41.260000000000005
+CRD,Errors Caushy,Alternative 3,90.0,rando_test_ranks,63.11
+CRD,Selection bias,Alternative 3,90.0,rando_test_ranks,90.36999999999999
