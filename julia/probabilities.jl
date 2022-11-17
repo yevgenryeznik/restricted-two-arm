@@ -6,16 +6,6 @@
 #   -  N2 -- a number of subjects allocated to treatment 2.
 
 
-# Completely Randomized Design
-function calculate_prb(rnd::CRD, N1::Int64, N2::Int64)
-    # getting probability of a coin: 
-    # it is a probability of treatment assignment
-    p = 0.5
-
-    return p
-end
-
-
 # Truncated Binomial Design
 function calculate_prb(rnd::TBD, N1::Int64, N2::Int64)
     # getting total sample size
