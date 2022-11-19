@@ -1,11 +1,15 @@
-# Function to simulate responses, given responses' distributions and treatment assignments
-function generate_rsp(R1::Distribution, R0::Distribution, trt::Array{Int64}, seed::Int64)
+# Function to simulate responses, given 
+# - responses' means (μ1, μ1).
+# - error distributions. 
+# - treatment assignments (trt).
+function generate_rsp(μ1::Float64, μ0::Float64, error::Distribution, trt::Array{Int64}, seed::Int64)
     nsbj, nsim = size(trt)
     rsp = zeros(nsbj, nsim)
 
     seed!(seed)
-    rsp1 = rand(R1, nsbj, nsim)
-    rsp0 = rand(R0, nsbj, nsim)
+    ε = rand(error, nsbj, nsim)
+    rsp1 = μ1 .+ ε
+    rsp0 = μ0 .+ ε
 
     for s ∈ 1:nsim
         for j ∈ 1:nsbj
