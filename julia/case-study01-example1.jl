@@ -1,8 +1,9 @@
 # Example 1 of the simulation study done for the publication:
 # -   title: A roadmap to using randomization in clinical trials
-# - authors: Vance W. Berger, Louis Joseph Bour, Kerstine Carter, Jonathan J. Chipman, Colin C. Everett, Nicole Heussen, 
-#            Catherine Hewitt, Ralf-Dieter Hilgers, Yuqun Abigail Luo, Jone Renteria, Yevgen Ryeznik, Oleksandr Sverdlov & 
-#            Diane Uschner
+# - authors: Vance W. Berger, Louis Joseph Bour, Kerstine Carter, 
+#            Jonathan J. Chipman, Colin C. Everett, Nicole Heussen, 
+#            Catherine Hewitt, Ralf-Dieter Hilgers, Yuqun Abigail Luo, 
+#            Jone Renteria, Yevgen Ryeznik, Oleksandr Sverdlov & Diane Uschner
 # - journal: BMC Medical Research Methodology 
 # -  volume: 21
 # -  number: 168
@@ -28,6 +29,7 @@ include("probabilities.jl")
 include("simulation.jl")
 include("calculate-op.jl")
 include("generate-rsp.jl")
+include("tests.jl")
 
 # sample size
 nsbj = 50
@@ -186,7 +188,7 @@ fig03 = Gadfly.plot(
     )
 )
 
-# saving PCG plot:
+# saving Imb(n) vs FI(n), plot:
 # pdf format
 fig03_pdf = "output/case-study01-example1-fig03.pdf"
 draw(PDF(fig03_pdf, 12inch, 8inch, dpi=300), fig03)
@@ -229,7 +231,7 @@ fig04 = Gadfly.plot(
     )
 )
 
-# saving PCG plot:
+# saving balance/randomness tradeoff heatmap plot:
 # pdf format
 fig04_pdf = "output/case-study01-example1-fig04.pdf"
 draw(PDF(fig04_pdf, 12inch, 8inch, dpi=300), fig04)
@@ -243,26 +245,32 @@ draw(PNG(fig04_png, 12inch, 8inch, dpi=300), fig04)
 function inference(μ1::Float64, μ0::Float64, σ::Float64, rct::SimulatedRCT, seed::Int64)
     nsbj, _ = size(rct.trt)
 
-    R1m1 = Normal(μ1, σ)
-    R0m1 = Normal(μ0, σ)
-    m1rsp = generate_rsp(R1m1, R0m1, rct.trt, seed)
-    rctm1 = set_response(rct, m1rsp)
+    # Model 1 (m1): R₁ = μ₁ + ε, R₀ = μ₀ + ε, 
+    # where ε ∼ N(0, σ²)
+    m1error = Normal(0, σ)
+    m1rsp = generate_rsp(μ1, μ0, m1error, rct.trt, seed)
+    m1rct = set_response(rct, m1rsp)
 
+    # Model 2 (m2): R₁ = μ₁ + uᵢ + ε, R₀ = μ₀ + uᵢ + ε, 
+    # where ε ∼ N(0, σ²) and uᵢ is a time trend
     m2rsp = add_tt(m1rsp, 5 .*collect(1:nsbj) ./ (nsbj + 1))
-    rctm2 = set_response(rct, m2rsp)
+    m2rct = set_response(rct, m2rsp)
     
-    R1m3 = Cauchy(μ1)
-    R0m3 = Cauchy(μ0)
-    m3rsp = generate_rsp(R1m3, R0m1, rct.trt, seed)
-    rctm3 = set_response(rct, m3rsp)
+    # Model 3 (m3): R₁ = μ₁ + ε, R₀ = μ₀ + ε, 
+    # where ε ∼ Caushy(0, 1)
+    m3error = Cauchy()
+    m3rsp = generate_rsp(μ1, μ0, m3error, rct.trt, seed)
+    m3rct = set_response(rct, m3rsp)
 
+    # Model 4 (m4): R₁ = μ₁ + uᵢ + ε, R₀ = μ₀ + uᵢ + ε, 
+    # where ε ∼ N(0, σ²) and uᵢ is a selection bias factor
     m4rsp = add_sb(rct.trt, m1rsp, 0.5)
-    rctm4 = set_response(rct, m4rsp)
+    m4rct = set_response(rct, m4rsp)
 
     model = ["Errors N(0, 1)", "Linear trend", "Errors Caushy", "Selection bias"]
-    error1 = [t_test(rctm, 0.05) for rctm in [rctm1, rctm2, rctm3, rctm4]]
-    error2 = [randomization_test(rctm, 0.05, false) for rctm in [rctm1, rctm2, rctm3, rctm4]]
-    error3 = [randomization_test(rctm, 0.05, true) for rctm in [rctm1, rctm2, rctm3, rctm4]]
+    error1 = [t_test(mrct, 0.05) for mrct in [m1rct, m2rct, m3rct, m4rct]]
+    error2 = [randomization_test(mrct, 0.05, false) for mrct in [m1rct, m2rct, m3rct, m4rct]]
+    error3 = [randomization_test(mrct, 0.05, true) for mrct in [m1rct, m2rct, m3rct, m4rct]]
     
     return DataFrame(
         design = rct.label, 
@@ -273,6 +281,7 @@ function inference(μ1::Float64, μ0::Float64, σ::Float64, rct::SimulatedRCT, s
     )
 end
 
+μ0 = 0.0 
 μ1_null = 0.00 # Null            (Type I error ~ 5%)  
 μ1_alt1 = 0.73 # Alternative I   (power ~ 70%)   
 μ1_alt2 = 0.82 # Alternative II  (power ~ 80%)
@@ -290,12 +299,19 @@ insertcols!(alt2, :scenario => "Alternative 2", :xintercept => 0.80)
 @time alt3 = vcat([inference(μ1_alt3, μ0, 1.0, rct[s], 314159) for s in eachindex(rct)]...)
 insertcols!(alt3, :scenario => "Alternative 3", :xintercept => 0.90)
 
+
 inference_df = @pipe vcat([null, alt1, alt2, alt3]...) |>
     stack(_, [:t_test, :rando_test, :rando_test_ranks]) |>
     transform(_, 
         :value => (x -> x*100) => :value,
         :xintercept => (x -> x*100) => :xintercept,
     )
+replace!(
+    inference_df.variable, 
+    "t_test" => "t-test", 
+    "rando_test" => "rando-test (mean diff)", 
+    "rando_test_ranks" => "rando-test (ranks)"
+)
 
 CSV.write("output/case-study01-example1-inference.csv", inference_df)
 
@@ -330,7 +346,7 @@ fig05 = Gadfly.plot(
     )
 )
 
-# saving PCG plot:
+# saving inference plot:
 # pdf format
 fig05_pdf = "output/case-study01-example1-fig05.pdf"
 draw(PDF(fig05_pdf, 12inch, 8inch, dpi=300), fig05)
