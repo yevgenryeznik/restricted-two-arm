@@ -1,6 +1,6 @@
 # Restricted randomization for two-arm trials with equal $1{:}1$ allocation
 
-A set of `Julia` functions to simulate _two-arm_ clinical trials targeting _equal 1:1 allocation_. 
+A set of `Julia` functions to simulate _restricted randomization_ for _two-arm_ clinical trials with _equal 1:1 allocation_. 
 
 More details about the implemented randomization procedure can be found [here](https://yevgenryeznik.github.io/restricted-two-arm).
 
