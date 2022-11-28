@@ -1,5 +1,5 @@
 ---
-title: "Restricted randomization for two-arm trials with equal $1{:}1$ allocation"
+title: "Restricted randomization for two-arm clinical trials with equal $1{:}1$ allocation"
 author: Yevgen Ryeznik
 date: today
 self-contained: true
@@ -13,7 +13,7 @@ jupyter: julia-1.8
 
 ## Background
 
-This repository collects a set of `Julia` functions to simulate several _restricted randomization_ procedures, targeting _equal_ $1{:}1$ allocation in _two-arm_ clinical trials.
+[This repository](https://github.com/yevgenryeznik/restricted-two-arm) collects a set of `Julia` functions to simulate several _restricted randomization_ procedures, targeting _equal_ $1{:}1$ allocation in _two-arm_ clinical trials.
 
 There are case studies included in the repository. 
 
