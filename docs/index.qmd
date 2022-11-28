@@ -1,5 +1,5 @@
 ---
-title: "Restricted randomization"
+title: "Restricted randomization for two-arm trials with equal $1{:}1$ allocation"
 author: Yevgen Ryeznik
 date: today
 self-contained: true
