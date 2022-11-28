@@ -1,0 +1,83 @@
+---
+title: "Restricted randomization"
+author: Yevgen Ryeznik
+date: today
+self-contained: true
+format:
+    html:
+        toc: true
+        toc-location: right
+        toc-title: On this page
+jupyter: julia-1.8
+---
+
+## Background
+
+This repository collects a set of `Julia` functions to simulate several _restricted randomization_ procedures, targeting _equal_ $1{:}1$ allocation in _two-arm_ clinical trials.
+
+There are case studies included in the repository. 
+
+## Restricted randomization
+
+Let us assume that there are two treatment arms considered in a clinical trial: 
+
+- _Experimental_ ($E$);
+- _Control_ ($C$).
+
+_Sample sizes_ on treatments are $n_E$ and $n_c$ respectively, and $n = n_E + n_C$ is a _total sample size_.
+
+A restricted randomization procedure is defined as
+
+$$
+\begin{aligned}
+\phi_1 &= \text{Pr}(\delta_1 = 1) = 0.5 \\
+\phi_j &= \text{Pr}(\delta_j = 1|\delta_1, \ldots, \delta_{j-1}), \: j = 2, \ldots, n,
+\end{aligned}
+$${#eq-RR}
+
+where $j$ is a number of a subject currently randomized in a trial (or an _allocation step_), and $\phi_j$is a _probability of tretament assignment_ for the $j^\text{th}$ subject, $j = 1, \ldots, n$.
+
+$$
+\delta_j = \left\{
+\begin{array}{rl}
+    1, \text{ if tretament }E \\
+    0, \text{ if tretament }C
+\end{array}
+\right.    
+$${#eq-trt-assignment}
+
+There are several restricted randomziation procedures implemented in the current repository.
+
+### Completely Randomized Design (CRD)
+
+$$
+\phi_j = 0.5, \: j = 1, \ldots, n.
+$${#eq-crd}
+
+### Truncated Binomial Design (TBD)
+
+Treatment assignments are made with probability 0.5 until one of the treatments receives its quota of $\frac{n}{2}$ subjects; thereafter all remaining assignments are made deterministically to the opposite treatment.
+
+For the current allocation step $j$, let $N_1$ and $N_2$ be the numbers of subjects allocated to treatments s.t. $N_1 + N_2 = j-1$. Then,   
+$$
+\phi_j = \left\{
+    \begin{array}{rl}
+    0.5, & \max(N_1, N_2) < \frac{n}{2} \\
+    1, & N_1 < N_2 \\
+    0, & N_1 > N_2
+    \end{array}
+\right.    
+$${#eq-tbd}
+
+### Permuted Block Design (PBD)
+
+Treatment assignments are made in blocks of size $b$, where $b$ is an _even_ number. The probabilities of treatment assignments within each block are changed according the current imbalance in a block. 
+
+At the $j^\text{th}$ allocation step, let $k$ be a number of the $j^\text{th}$ subject in a current block and $n_1$ be a number os subjects in a block allocated to treatment 1 ($E$). Then, 
+
+$$
+\phi_j = \frac{0.5*b-n_1}{b-k+1}.
+$${#eq-pbd}
+
+### Random Allocation Rule (Rand) 
+
