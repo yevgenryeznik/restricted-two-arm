@@ -196,7 +196,7 @@ One can also consider $\Pr(|D(j)| = 0)$, the probability of achieving exact bala
 
 Two other useful summary measures are the _expected imbalance at the_ $j^\text{th}$ _step_, $E|D(j)|$ and the _expected value of the maximum imbalance_ of the entire randomization sequence, $E\left(\max\limits_{1\leq j\leq n}|D(j)|\right)$.
 
-## Randomness
+### Randomness
 
 Greater forcing of balance implies _lack of randomness_. A procedure that lacks randomness may be susceptible to _selection bias_.
 

@@ -2464,8 +2464,8 @@ vertical-align: -.125em;
   <li><a href="#operational-characteristics" id="toc-operational-characteristics" class="nav-link" data-scroll-target="#operational-characteristics">Operational Characteristics</a>
   <ul class="collapse">
   <li><a href="#imbalance" id="toc-imbalance" class="nav-link" data-scroll-target="#imbalance">Imbalance</a></li>
-  </ul></li>
   <li><a href="#randomness" id="toc-randomness" class="nav-link" data-scroll-target="#randomness">Randomness</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -2655,9 +2655,8 @@ D(j) = N_1 - N_2
 <p>One can also consider <span class="math inline">\(\Pr(|D(j)| = 0)\)</span>, the probability of achieving exact balance after <span class="math inline">\(j\)</span> allocation steps. In particular, <span class="math inline">\(\Pr(|D(n)| = 0)\)</span> is the probability that the final treatment numbers are balanced.</p>
 <p>Two other useful summary measures are the <em>expected imbalance at the</em> <span class="math inline">\(j^\text{th}\)</span> <em>step</em>, <span class="math inline">\(E|D(j)|\)</span> and the <em>expected value of the maximum imbalance</em> of the entire randomization sequence, <span class="math inline">\(E\left(\max\limits_{1\leq j\leq n}|D(j)|\right)\)</span>.</p>
 </section>
-</section>
-<section id="randomness" class="level2">
-<h2 class="anchored" data-anchor-id="randomness">Randomness</h2>
+<section id="randomness" class="level3">
+<h3 class="anchored" data-anchor-id="randomness">Randomness</h3>
 <p>Greater forcing of balance implies <em>lack of randomness</em>. A procedure that lacks randomness may be susceptible to <em>selection bias</em>.</p>
 <p>A classic approach to quantify the degree of susceptibility of a procedure to selection bias is the <em>Blackwell-Hodges model</em>.</p>
 <p>Let <span class="math inline">\(G_j = 1\)</span> (or <span class="math inline">\(0\)</span>), if at the <span class="math inline">\(j^\text{th}\)</span> allocation step an investigator makes a correct (or incorrect) guess on treatment assignment <span class="math inline">\(\delta_j\)</span>, given past allocations <span class="math inline">\(\boldsymbol{\delta}_{i−1}\)</span>.</p>
@@ -2668,6 +2667,7 @@ E(F) = E\left(\sum_{j=1}^nG_j\right) - \frac{n}{2}.
 \]</span></p>
 <p>This quantity equal to zero for CRD, and it is positive for restricted randomization procedures (greater values indicate higher expected bias).</p>
 <p>One can also consider an <em>expected proportion of deterministic assignments</em> in a sequence as another measure of lack of randomness.</p>
+</section>
 </section>
 
 </main>
