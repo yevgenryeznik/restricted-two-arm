@@ -17,14 +17,14 @@ jupyter: julia-1.8
 
 There are case studies included in the repository. 
 
-## Restricted randomization
+## Restricted Randomization
 
 Let us assume that there are two treatment arms considered in a clinical trial: 
 
 - _Experimental_ ($E$);
 - _Control_ ($C$).
 
-_Sample sizes_ on treatments are $n_E$ and $n_c$ respectively, and $n = n_E + n_C$ is a _total sample size_.
+_Sample sizes_ on treatments are $N_1$ ($n_E$) and $N_2$ ($n_c$) respectively, and $n = n_E + n_C$ is a _total sample size_.
 
 A restricted randomization procedure is defined as
 
@@ -48,13 +48,13 @@ $${#eq-trt-assignment}
 
 There are several restricted randomziation procedures implemented in the current repository.
 
-### Completely Randomized Design (CRD)
+### Completely Randomized Design, $\text{CRD}$
 
 $$
 \phi_j = 0.5, \: j = 1, \ldots, n.
 $${#eq-crd}
 
-### Truncated Binomial Design (TBD)
+### Truncated Binomial Design, $\text{TBD}$
 
 Treatment assignments are made with probability 0.5 until one of the treatments receives its quota of $\frac{n}{2}$ subjects; thereafter all remaining assignments are made deterministically to the opposite treatment.
 
@@ -66,18 +66,152 @@ $$
     1, & N_1 < N_2 \\
     0, & N_1 > N_2
     \end{array}
-\right.    
+\right.,\: j = 1, \ldots, n.    
 $${#eq-tbd}
 
-### Permuted Block Design (PBD)
+### Permuted Block Design, $\text{PBD}(b)$
 
 Treatment assignments are made in blocks of size $b$, where $b$ is an _even_ number. The probabilities of treatment assignments within each block are changed according the current imbalance in a block. 
 
-At the $j^\text{th}$ allocation step, let $k$ be a number of the $j^\text{th}$ subject in a current block and $n_1$ be a number os subjects in a block allocated to treatment 1 ($E$). Then, 
+At the $j^\text{th}$ allocation step, let $k$ be a number of the $j^\text{th}$ subject in a current block and $n_1$ be a number of subjects in a block allocated to treatment 1 ($E$). Then, 
 
 $$
-\phi_j = \frac{0.5*b-n_1}{b-k+1}.
+\phi_j = \frac{0.5b-n_1}{b-k+1}, \: j = 1, \ldots, n.
 $${#eq-pbd}
 
-### Random Allocation Rule (Rand) 
+### Random Allocation Rule, $\text{Rand}$ 
 
+A version of PBD, when the block size $b$ equals to the total sample size $n$. At the $j^\text{th}$ allocation step,
+
+$$
+\phi_j = \frac{0.5n-N_1}{n-j+1}, \: j = 1, \ldots, n,
+$${#eq-rand}
+
+and $N_1$ is a number of subject already allocated to the treatment 1 ($E$). 
+
+### Efron's Biased Coin Design, $\text{BCD}(p)$
+
+At any allocation step, if treatment numbers $N_1$ and $N_2$ are balanced, the next assignment is made with probability 0.5; otherwise, the underrepresented treatment is assigned with probability $p$, where $0.5 < p \leq 1$ is a fixed and pre-specified parameter that determines the tradeoff between balance and randomness.
+
+$$
+\phi_j = \left\{
+    \begin{array}{rl}
+    0.5, & N_1 = N_2 \\
+    p, & N_1 < N_2 \\
+    1-p, & N_1 > N_2
+    \end{array}
+\right.,\: j = 1, \ldots, n.    
+$${#eq-ebcd}
+
+Note that $p=1$ corresponds to PBD with block size $b=2$.
+
+### Adjustable Biased Coin Design, $\text{ABCD}(a)$
+
+An extension of Efron's BCD. At the $j^\text{th}$  allocation step, given tretament numbers $N_1$ and $N_2$, $N_1 + N_2$, s.t. $N_1 + N_2 = j-1$, and imbalance $d = N_1-N_2$,
+
+$$
+\phi_j = \left\{
+    \begin{array}{rl}
+    0.5, & |d| \leq 1 \\
+    \frac{|x|^a}{|x|^a + 1}, & d < -1 \\
+    \frac{1}{|x|^a + 1}, & d > 1
+    \end{array}
+\right.,\: j = 1, \ldots, n,    
+$${#eq-abcd}
+
+where $a>0$ is a parameter of the randomization procedure.
+
+
+### Generalized Biased Coin Design, $\text{GBCD}(\gamma)$
+
+A generalization of Efron's BCD. At the $j^\text{th}$  allocation step, given tretament numbers $N_1$ and $N_2$, $N_1 + N_2$, s.t. $N_1 + N_2 = j-1$, 
+
+$$
+\phi_j = \left\{
+    \begin{array}{rl}
+    0.5, & j = 1 \\
+    \frac{N_2^\gamma}{N_1^\gamma + N_2^\gamma}, & j = 2, \ldots, n,
+    \end{array}
+\right.    
+$${#eq-gbcd}
+
+where $\gamma > 0$ is a parameter of the randomization procedure.
+
+### Big Stick Design, $\text{BSD}(mti)$
+
+An example of _maximum tolerated imbalance_ (MTI) procedures. It makes prediction of the future treatment allocations more difficult (even knowing the current sizes of the treatment groups) and controls treatment imbalance at a predefined threshold throughout the experiment. A general MTI procedure specifies a certain boundary for treatment imbalance, say $mti > 0$, that cannot be exceeded. 
+
+At the $j^\text{th}$  allocation step, given tretament numbers $N_1$ and $N_2$, $N_1 + N_2$, s.t. $N_1 + N_2 = j-1$, and imbalance $d = N_1-N_2$,
+
+$$
+\phi_j = \left\{
+    \begin{array}{rl}
+    0.5, & |d| < mti \\
+    0, & d = mti \\
+    1, & d = -mti
+    \end{array}
+\right.,\: j = 1, \ldots, n.    
+$${#eq-bsd}
+
+### Biased Coin Design With Imbalance Tolerance, $\text{BCDWIT}(p, mti)$
+
+A combination of Efron's BCD and BSD. At the $j^\text{th}$  allocation step, given tretament numbers $N_1$ and $N_2$, $N_1 + N_2$, s.t. $N_1 + N_2 = j-1$, and imbalance $d = N_1-N_2$,
+
+$$
+\phi_j = \left\{
+    \begin{array}{rl}
+    0.5, & |d| < mti~\&~d = 0\\
+    p, & |d| < mti~\&~d < 0 \\
+    1-p, & |d| < mti~\&~d > 0 \\
+    0, & d = mti \\
+    1, & d = -mti
+    \end{array}
+\right.,\: j = 1, \ldots, n.    
+$${#eq-bcdwit}
+
+## Operational Characteristics
+
+Two important characteristics of a randomization procedure are _imbalance_ and _randomness_.
+
+### Imbalance
+
+After the $j^\text{th}$ allocations ($1 \leq j \leq b$), 
+$$
+D(j) = N_1 - N_2
+$${#eq-imb}
+
+is a _tretament imbalance_, where $N_1$ and $N_2$ are the numbers of treatment assigments to treatment 1 ($E$) and 2 ($C$) respectively.
+
+For any $j \geq 1$, $D(j)$ is a _random variable_ with a probability distribution determined by the chosen randomization procedure.
+
+Several measures of imbalance can be considered, for example, the _absolute value of imbalance_, 
+
+$$
+|D(j)|, \: j = 1, \ldots, n. 
+$${#eq-abs-imb}
+
+$|D(i)| = 0$ indicates that the trial is perfectly balanced.
+
+One can also consider $\Pr(|D(j)| = 0)$, the probability of achieving exact balance after $j$ allocation steps. In particular, $\Pr(|D(n)| = 0)$ is the probability that the final treatment numbers are balanced. 
+
+Two other useful summary measures are the _expected imbalance at the_ $j^\text{th}$ _step_, $E|D(j)|$ and the _expected value of the maximum imbalance_ of the entire randomization sequence, $E\left(\max\limits_{1\leq j\leq n}|D(j)|\right)$.
+
+## Randomness
+
+Greater forcing of balance implies _lack of randomness_. A procedure that lacks randomness may be susceptible to _selection bias_.
+
+A classic approach to quantify the degree of susceptibility of a procedure to selection bias is the _Blackwell-Hodges model_. 
+
+Let $G_j = 1$ (or $0$), if at the $j^\text{th}$ allocation step an investigator makes a correct (or incorrect) guess on treatment assignment $\delta_j$, given past allocations $\boldsymbol{\delta}_{i−1}$.
+
+Then. the _predictability of the design_ at the $j^\text{th}$ step is the expected value of $G_j$, i.e. $E(G_j) = \Pr(G_j = 1)$.
+
+Blackwell and Hodges considered the _expected bias factor_, the difference between expected total number of correct guesses of a given sequence of random assignments and the similar quantity obtained from CRD for which treatment assignments are made independently with equal probability: 
+
+$$
+E(F) = E\left(\sum_{j=1}^nG_j\right) - \frac{n}{2}. 
+$$
+
+This quantity equal to zero for CRD, and it is positive for restricted randomization procedures (greater values indicate higher expected bias). 
+
+One can also consider an _expected proportion of deterministic assignments_ in a sequence as another measure of lack of randomness.

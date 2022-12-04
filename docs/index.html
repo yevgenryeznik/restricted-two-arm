@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Yevgen Ryeznik">
-<meta name="dcterms.date" content="2022-11-28">
+<meta name="dcterms.date" content="2022-12-04">
 
 <title>Restricted randomization for two-arm clinical trials with equal 1{:}1 allocation</title>
 <style>
@@ -2449,13 +2449,23 @@ vertical-align: -.125em;
    
   <ul>
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#restricted-randomization" id="toc-restricted-randomization" class="nav-link" data-scroll-target="#restricted-randomization">Restricted randomization</a>
+  <li><a href="#restricted-randomization" id="toc-restricted-randomization" class="nav-link" data-scroll-target="#restricted-randomization">Restricted Randomization</a>
   <ul class="collapse">
-  <li><a href="#completely-randomized-design-crd" id="toc-completely-randomized-design-crd" class="nav-link" data-scroll-target="#completely-randomized-design-crd">Completely Randomized Design (CRD)</a></li>
-  <li><a href="#truncated-binomial-design-tbd" id="toc-truncated-binomial-design-tbd" class="nav-link" data-scroll-target="#truncated-binomial-design-tbd">Truncated Binomial Design (TBD)</a></li>
-  <li><a href="#permuted-block-design-pbd" id="toc-permuted-block-design-pbd" class="nav-link" data-scroll-target="#permuted-block-design-pbd">Permuted Block Design (PBD)</a></li>
-  <li><a href="#random-allocation-rule-rand" id="toc-random-allocation-rule-rand" class="nav-link" data-scroll-target="#random-allocation-rule-rand">Random Allocation Rule (Rand)</a></li>
+  <li><a href="#completely-randomized-design-textcrd" id="toc-completely-randomized-design-textcrd" class="nav-link" data-scroll-target="#completely-randomized-design-textcrd">Completely Randomized Design, <span class="math inline">\(\text{CRD}\)</span></a></li>
+  <li><a href="#truncated-binomial-design-texttbd" id="toc-truncated-binomial-design-texttbd" class="nav-link" data-scroll-target="#truncated-binomial-design-texttbd">Truncated Binomial Design, <span class="math inline">\(\text{TBD}\)</span></a></li>
+  <li><a href="#permuted-block-design-textpbdb" id="toc-permuted-block-design-textpbdb" class="nav-link" data-scroll-target="#permuted-block-design-textpbdb">Permuted Block Design, <span class="math inline">\(\text{PBD}(b)\)</span></a></li>
+  <li><a href="#random-allocation-rule-textrand" id="toc-random-allocation-rule-textrand" class="nav-link" data-scroll-target="#random-allocation-rule-textrand">Random Allocation Rule, <span class="math inline">\(\text{Rand}\)</span></a></li>
+  <li><a href="#efrons-biased-coin-design-textbcdp" id="toc-efrons-biased-coin-design-textbcdp" class="nav-link" data-scroll-target="#efrons-biased-coin-design-textbcdp">Efron’s Biased Coin Design, <span class="math inline">\(\text{BCD}(p)\)</span></a></li>
+  <li><a href="#adjustable-biased-coin-design-textabcda" id="toc-adjustable-biased-coin-design-textabcda" class="nav-link" data-scroll-target="#adjustable-biased-coin-design-textabcda">Adjustable Biased Coin Design, <span class="math inline">\(\text{ABCD}(a)\)</span></a></li>
+  <li><a href="#generalized-biased-coin-design-textgbcdgamma" id="toc-generalized-biased-coin-design-textgbcdgamma" class="nav-link" data-scroll-target="#generalized-biased-coin-design-textgbcdgamma">Generalized Biased Coin Design, <span class="math inline">\(\text{GBCD}(\gamma)\)</span></a></li>
+  <li><a href="#big-stick-design-textbsdmti" id="toc-big-stick-design-textbsdmti" class="nav-link" data-scroll-target="#big-stick-design-textbsdmti">Big Stick Design, <span class="math inline">\(\text{BSD}(mti)\)</span></a></li>
+  <li><a href="#biased-coin-design-with-imbalance-tolerance-textbcdwitp-mti" id="toc-biased-coin-design-with-imbalance-tolerance-textbcdwitp-mti" class="nav-link" data-scroll-target="#biased-coin-design-with-imbalance-tolerance-textbcdwitp-mti">Biased Coin Design With Imbalance Tolerance, <span class="math inline">\(\text{BCDWIT}(p, mti)\)</span></a></li>
   </ul></li>
+  <li><a href="#operational-characteristics" id="toc-operational-characteristics" class="nav-link" data-scroll-target="#operational-characteristics">Operational Characteristics</a>
+  <ul class="collapse">
+  <li><a href="#imbalance" id="toc-imbalance" class="nav-link" data-scroll-target="#imbalance">Imbalance</a></li>
+  </ul></li>
+  <li><a href="#randomness" id="toc-randomness" class="nav-link" data-scroll-target="#randomness">Randomness</a></li>
   </ul>
 </nav>
 </div>
@@ -2480,7 +2490,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 28, 2022</p>
+      <p class="date">December 4, 2022</p>
     </div>
   </div>
     
@@ -2495,13 +2505,13 @@ vertical-align: -.125em;
 <p>There are case studies included in the repository.</p>
 </section>
 <section id="restricted-randomization" class="level2">
-<h2 class="anchored" data-anchor-id="restricted-randomization">Restricted randomization</h2>
+<h2 class="anchored" data-anchor-id="restricted-randomization">Restricted Randomization</h2>
 <p>Let us assume that there are two treatment arms considered in a clinical trial:</p>
 <ul>
 <li><em>Experimental</em> (<span class="math inline">\(E\)</span>);</li>
 <li><em>Control</em> (<span class="math inline">\(C\)</span>).</li>
 </ul>
-<p><em>Sample sizes</em> on treatments are <span class="math inline">\(n_E\)</span> and <span class="math inline">\(n_c\)</span> respectively, and <span class="math inline">\(n = n_E + n_C\)</span> is a <em>total sample size</em>.</p>
+<p><em>Sample sizes</em> on treatments are <span class="math inline">\(N_1\)</span> (<span class="math inline">\(n_E\)</span>) and <span class="math inline">\(N_2\)</span> (<span class="math inline">\(n_c\)</span>) respectively, and <span class="math inline">\(n = n_E + n_C\)</span> is a <em>total sample size</em>.</p>
 <p>A restricted randomization procedure is defined as</p>
 <p><span id="eq-RR"><span class="math display">\[
 \begin{aligned}
@@ -2519,14 +2529,14 @@ vertical-align: -.125em;
 \right.    
 \tag{2}\]</span></span></p>
 <p>There are several restricted randomziation procedures implemented in the current repository.</p>
-<section id="completely-randomized-design-crd" class="level3">
-<h3 class="anchored" data-anchor-id="completely-randomized-design-crd">Completely Randomized Design (CRD)</h3>
+<section id="completely-randomized-design-textcrd" class="level3">
+<h3 class="anchored" data-anchor-id="completely-randomized-design-textcrd">Completely Randomized Design, <span class="math inline">\(\text{CRD}\)</span></h3>
 <p><span id="eq-crd"><span class="math display">\[
 \phi_j = 0.5, \: j = 1, \ldots, n.
 \tag{3}\]</span></span></p>
 </section>
-<section id="truncated-binomial-design-tbd" class="level3">
-<h3 class="anchored" data-anchor-id="truncated-binomial-design-tbd">Truncated Binomial Design (TBD)</h3>
+<section id="truncated-binomial-design-texttbd" class="level3">
+<h3 class="anchored" data-anchor-id="truncated-binomial-design-texttbd">Truncated Binomial Design, <span class="math inline">\(\text{TBD}\)</span></h3>
 <p>Treatment assignments are made with probability 0.5 until one of the treatments receives its quota of <span class="math inline">\(\frac{n}{2}\)</span> subjects; thereafter all remaining assignments are made deterministically to the opposite treatment.</p>
 <p>For the current allocation step <span class="math inline">\(j\)</span>, let <span class="math inline">\(N_1\)</span> and <span class="math inline">\(N_2\)</span> be the numbers of subjects allocated to treatments s.t. <span class="math inline">\(N_1 + N_2 = j-1\)</span>. Then,</p>
 <p><span id="eq-tbd"><span class="math display">\[
@@ -2536,20 +2546,128 @@ vertical-align: -.125em;
     1, &amp; N_1 &lt; N_2 \\
     0, &amp; N_1 &gt; N_2
     \end{array}
-\right.    
+\right.,\: j = 1, \ldots, n.    
 \tag{4}\]</span></span></p>
 </section>
-<section id="permuted-block-design-pbd" class="level3">
-<h3 class="anchored" data-anchor-id="permuted-block-design-pbd">Permuted Block Design (PBD)</h3>
+<section id="permuted-block-design-textpbdb" class="level3">
+<h3 class="anchored" data-anchor-id="permuted-block-design-textpbdb">Permuted Block Design, <span class="math inline">\(\text{PBD}(b)\)</span></h3>
 <p>Treatment assignments are made in blocks of size <span class="math inline">\(b\)</span>, where <span class="math inline">\(b\)</span> is an <em>even</em> number. The probabilities of treatment assignments within each block are changed according the current imbalance in a block.</p>
-<p>At the <span class="math inline">\(j^\text{th}\)</span> allocation step, let <span class="math inline">\(k\)</span> be a number of the <span class="math inline">\(j^\text{th}\)</span> subject in a current block and <span class="math inline">\(n_1\)</span> be a number os subjects in a block allocated to treatment 1 (<span class="math inline">\(E\)</span>). Then,</p>
+<p>At the <span class="math inline">\(j^\text{th}\)</span> allocation step, let <span class="math inline">\(k\)</span> be a number of the <span class="math inline">\(j^\text{th}\)</span> subject in a current block and <span class="math inline">\(n_1\)</span> be a number of subjects in a block allocated to treatment 1 (<span class="math inline">\(E\)</span>). Then,</p>
 <p><span id="eq-pbd"><span class="math display">\[
-\phi_j = \frac{0.5*b-n_1}{b-k+1}.
+\phi_j = \frac{0.5b-n_1}{b-k+1}, \: j = 1, \ldots, n.
 \tag{5}\]</span></span></p>
 </section>
-<section id="random-allocation-rule-rand" class="level3">
-<h3 class="anchored" data-anchor-id="random-allocation-rule-rand">Random Allocation Rule (Rand)</h3>
+<section id="random-allocation-rule-textrand" class="level3">
+<h3 class="anchored" data-anchor-id="random-allocation-rule-textrand">Random Allocation Rule, <span class="math inline">\(\text{Rand}\)</span></h3>
+<p>A version of PBD, when the block size <span class="math inline">\(b\)</span> equals to the total sample size <span class="math inline">\(n\)</span>. At the <span class="math inline">\(j^\text{th}\)</span> allocation step,</p>
+<p><span id="eq-rand"><span class="math display">\[
+\phi_j = \frac{0.5n-N_1}{n-j+1}, \: j = 1, \ldots, n,
+\tag{6}\]</span></span></p>
+<p>and <span class="math inline">\(N_1\)</span> is a number of subject already allocated to the treatment 1 (<span class="math inline">\(E\)</span>).</p>
 </section>
+<section id="efrons-biased-coin-design-textbcdp" class="level3">
+<h3 class="anchored" data-anchor-id="efrons-biased-coin-design-textbcdp">Efron’s Biased Coin Design, <span class="math inline">\(\text{BCD}(p)\)</span></h3>
+<p>At any allocation step, if treatment numbers <span class="math inline">\(N_1\)</span> and <span class="math inline">\(N_2\)</span> are balanced, the next assignment is made with probability 0.5; otherwise, the underrepresented treatment is assigned with probability <span class="math inline">\(p\)</span>, where <span class="math inline">\(0.5 &lt; p \leq 1\)</span> is a fixed and pre-specified parameter that determines the tradeoff between balance and randomness.</p>
+<p><span id="eq-ebcd"><span class="math display">\[
+\phi_j = \left\{
+    \begin{array}{rl}
+    0.5, &amp; N_1 = N_2 \\
+    p, &amp; N_1 &lt; N_2 \\
+    1-p, &amp; N_1 &gt; N_2
+    \end{array}
+\right.,\: j = 1, \ldots, n.    
+\tag{7}\]</span></span></p>
+<p>Note that <span class="math inline">\(p=1\)</span> corresponds to PBD with block size <span class="math inline">\(b=2\)</span>.</p>
+</section>
+<section id="adjustable-biased-coin-design-textabcda" class="level3">
+<h3 class="anchored" data-anchor-id="adjustable-biased-coin-design-textabcda">Adjustable Biased Coin Design, <span class="math inline">\(\text{ABCD}(a)\)</span></h3>
+<p>An extension of Efron’s BCD. At the <span class="math inline">\(j^\text{th}\)</span> allocation step, given tretament numbers <span class="math inline">\(N_1\)</span> and <span class="math inline">\(N_2\)</span>, <span class="math inline">\(N_1 + N_2\)</span>, s.t. <span class="math inline">\(N_1 + N_2 = j-1\)</span>, and imbalance <span class="math inline">\(d = N_1-N_2\)</span>,</p>
+<p><span id="eq-abcd"><span class="math display">\[
+\phi_j = \left\{
+    \begin{array}{rl}
+    0.5, &amp; |d| \leq 1 \\
+    \frac{|x|^a}{|x|^a + 1}, &amp; d &lt; -1 \\
+    \frac{1}{|x|^a + 1}, &amp; d &gt; 1
+    \end{array}
+\right.,\: j = 1, \ldots, n,    
+\tag{8}\]</span></span></p>
+<p>where <span class="math inline">\(a&gt;0\)</span> is a parameter of the randomization procedure.</p>
+</section>
+<section id="generalized-biased-coin-design-textgbcdgamma" class="level3">
+<h3 class="anchored" data-anchor-id="generalized-biased-coin-design-textgbcdgamma">Generalized Biased Coin Design, <span class="math inline">\(\text{GBCD}(\gamma)\)</span></h3>
+<p>A generalization of Efron’s BCD. At the <span class="math inline">\(j^\text{th}\)</span> allocation step, given tretament numbers <span class="math inline">\(N_1\)</span> and <span class="math inline">\(N_2\)</span>, <span class="math inline">\(N_1 + N_2\)</span>, s.t. <span class="math inline">\(N_1 + N_2 = j-1\)</span>,</p>
+<p><span id="eq-gbcd"><span class="math display">\[
+\phi_j = \left\{
+    \begin{array}{rl}
+    0.5, &amp; j = 1 \\
+    \frac{N_2^\gamma}{N_1^\gamma + N_2^\gamma}, &amp; j = 2, \ldots, n,
+    \end{array}
+\right.    
+\tag{9}\]</span></span></p>
+<p>where <span class="math inline">\(\gamma &gt; 0\)</span> is a parameter of the randomization procedure.</p>
+</section>
+<section id="big-stick-design-textbsdmti" class="level3">
+<h3 class="anchored" data-anchor-id="big-stick-design-textbsdmti">Big Stick Design, <span class="math inline">\(\text{BSD}(mti)\)</span></h3>
+<p>An example of <em>maximum tolerated imbalance</em> (MTI) procedures. It makes prediction of the future treatment allocations more difficult (even knowing the current sizes of the treatment groups) and controls treatment imbalance at a predefined threshold throughout the experiment. A general MTI procedure specifies a certain boundary for treatment imbalance, say <span class="math inline">\(mti &gt; 0\)</span>, that cannot be exceeded.</p>
+<p>At the <span class="math inline">\(j^\text{th}\)</span> allocation step, given tretament numbers <span class="math inline">\(N_1\)</span> and <span class="math inline">\(N_2\)</span>, <span class="math inline">\(N_1 + N_2\)</span>, s.t. <span class="math inline">\(N_1 + N_2 = j-1\)</span>, and imbalance <span class="math inline">\(d = N_1-N_2\)</span>,</p>
+<p><span id="eq-bsd"><span class="math display">\[
+\phi_j = \left\{
+    \begin{array}{rl}
+    0.5, &amp; |d| &lt; mti \\
+    0, &amp; d = mti \\
+    1, &amp; d = -mti
+    \end{array}
+\right.,\: j = 1, \ldots, n.    
+\tag{10}\]</span></span></p>
+</section>
+<section id="biased-coin-design-with-imbalance-tolerance-textbcdwitp-mti" class="level3">
+<h3 class="anchored" data-anchor-id="biased-coin-design-with-imbalance-tolerance-textbcdwitp-mti">Biased Coin Design With Imbalance Tolerance, <span class="math inline">\(\text{BCDWIT}(p, mti)\)</span></h3>
+<p>A combination of Efron’s BCD and BSD. At the <span class="math inline">\(j^\text{th}\)</span> allocation step, given tretament numbers <span class="math inline">\(N_1\)</span> and <span class="math inline">\(N_2\)</span>, <span class="math inline">\(N_1 + N_2\)</span>, s.t. <span class="math inline">\(N_1 + N_2 = j-1\)</span>, and imbalance <span class="math inline">\(d = N_1-N_2\)</span>,</p>
+<p><span id="eq-bcdwit"><span class="math display">\[
+\phi_j = \left\{
+    \begin{array}{rl}
+    0.5, &amp; |d| &lt; mti~\&amp;~d = 0\\
+    p, &amp; |d| &lt; mti~\&amp;~d &lt; 0 \\
+    1-p, &amp; |d| &lt; mti~\&amp;~d &gt; 0 \\
+    0, &amp; d = mti \\
+    1, &amp; d = -mti
+    \end{array}
+\right.,\: j = 1, \ldots, n.    
+\tag{11}\]</span></span></p>
+</section>
+</section>
+<section id="operational-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="operational-characteristics">Operational Characteristics</h2>
+<p>Two important characteristics of a randomization procedure are <em>imbalance</em> and <em>randomness</em>.</p>
+<section id="imbalance" class="level3">
+<h3 class="anchored" data-anchor-id="imbalance">Imbalance</h3>
+<p>After the <span class="math inline">\(j^\text{th}\)</span> allocations (<span class="math inline">\(1 \leq j \leq b\)</span>),</p>
+<p><span id="eq-imb"><span class="math display">\[
+D(j) = N_1 - N_2
+\tag{12}\]</span></span></p>
+<p>is a <em>tretament imbalance</em>, where <span class="math inline">\(N_1\)</span> and <span class="math inline">\(N_2\)</span> are the numbers of treatment assigments to treatment 1 (<span class="math inline">\(E\)</span>) and 2 (<span class="math inline">\(C\)</span>) respectively.</p>
+<p>For any <span class="math inline">\(j \geq 1\)</span>, <span class="math inline">\(D(j)\)</span> is a <em>random variable</em> with a probability distribution determined by the chosen randomization procedure.</p>
+<p>Several measures of imbalance can be considered, for example, the <em>absolute value of imbalance</em>,</p>
+<p><span id="eq-abs-imb"><span class="math display">\[
+|D(j)|, \: j = 1, \ldots, n.
+\tag{13}\]</span></span></p>
+<p><span class="math inline">\(|D(i)| = 0\)</span> indicates that the trial is perfectly balanced.</p>
+<p>One can also consider <span class="math inline">\(\Pr(|D(j)| = 0)\)</span>, the probability of achieving exact balance after <span class="math inline">\(j\)</span> allocation steps. In particular, <span class="math inline">\(\Pr(|D(n)| = 0)\)</span> is the probability that the final treatment numbers are balanced.</p>
+<p>Two other useful summary measures are the <em>expected imbalance at the</em> <span class="math inline">\(j^\text{th}\)</span> <em>step</em>, <span class="math inline">\(E|D(j)|\)</span> and the <em>expected value of the maximum imbalance</em> of the entire randomization sequence, <span class="math inline">\(E\left(\max\limits_{1\leq j\leq n}|D(j)|\right)\)</span>.</p>
+</section>
+</section>
+<section id="randomness" class="level2">
+<h2 class="anchored" data-anchor-id="randomness">Randomness</h2>
+<p>Greater forcing of balance implies <em>lack of randomness</em>. A procedure that lacks randomness may be susceptible to <em>selection bias</em>.</p>
+<p>A classic approach to quantify the degree of susceptibility of a procedure to selection bias is the <em>Blackwell-Hodges model</em>.</p>
+<p>Let <span class="math inline">\(G_j = 1\)</span> (or <span class="math inline">\(0\)</span>), if at the <span class="math inline">\(j^\text{th}\)</span> allocation step an investigator makes a correct (or incorrect) guess on treatment assignment <span class="math inline">\(\delta_j\)</span>, given past allocations <span class="math inline">\(\boldsymbol{\delta}_{i−1}\)</span>.</p>
+<p>Then. the <em>predictability of the design</em> at the <span class="math inline">\(j^\text{th}\)</span> step is the expected value of <span class="math inline">\(G_j\)</span>, i.e. <span class="math inline">\(E(G_j) = \Pr(G_j = 1)\)</span>.</p>
+<p>Blackwell and Hodges considered the <em>expected bias factor</em>, the difference between expected total number of correct guesses of a given sequence of random assignments and the similar quantity obtained from CRD for which treatment assignments are made independently with equal probability:</p>
+<p><span class="math display">\[
+E(F) = E\left(\sum_{j=1}^nG_j\right) - \frac{n}{2}.
+\]</span></p>
+<p>This quantity equal to zero for CRD, and it is positive for restricted randomization procedures (greater values indicate higher expected bias).</p>
+<p>One can also consider an <em>expected proportion of deterministic assignments</em> in a sequence as another measure of lack of randomness.</p>
 </section>
 
 </main>
